@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rltVoice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgBigUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_user_placehoder"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:id="@+id/lltVoiceUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/dim32"
+            android:paddingHorizontal="@dimen/dim24"
+            android:background="#40FFFFFF"
+            android:gravity="center_horizontal">
+
+            <TextView
+                style="@style/text20"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="Chats en vivo"/>
+
+            <TextView
+                style="@style/text20"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="audios"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/dim100"
+                android:layout_height="@dimen/dim100"
+                android:layout_marginTop="@dimen/dim24"
+                app:cardBackgroundColor="@null"
+                app:cardCornerRadius="50dp"
+                app:cardMaxElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txtVoiceUser"
+                style="@style/text16"
+                android:layout_marginTop="@dimen/dim20"
+                android:textStyle="bold"
+                android:text="Laura16"
+                android:textColor="@android:color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/imgPlay"
+                android:layout_width="@dimen/dim70"
+                android:layout_height="@dimen/dim70"
+                android:src="@drawable/ic_arrow_play"
+                android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim24"
+                android:thumbTint="@android:color/white"
+                android:progress="0"
+                android:progressTint="@android:color/white"
+                android:progressBackgroundTint="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/txtDuration"
+                style="@style/text14"
+                android:layout_marginTop="@dimen/dim12"
+                android:layout_gravity="end"
+                android:textColor="@android:color/white"
+                android:text="00:16"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:id="@+id/lltCancel"
+                android:layout_width="230dp"
+                android:layout_height="@dimen/dim45"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/dim16"
+                android:background="@drawable/round_border25"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dim20">
+
+                <TextView
+                    style="@style/text16"
+                    android:textStyle="bold"
+                    android:text="Volver al chat"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

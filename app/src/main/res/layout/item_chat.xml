@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dim16"
+    android:layout_marginEnd="@dimen/dim16"
+    android:layout_marginBottom="@dimen/dim16"
+    android:background="@drawable/round_border10"
+    android:padding="@dimen/dim10">
+
+    <LinearLayout
+        android:id="@+id/lltAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ring_shape_2"
+        android:padding="@dimen/dim4">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/dim45"
+            android:layout_height="@dimen/dim45"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/dim24"
+            android:background="@null">
+
+            <ImageView
+                android:id="@+id/imgUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_placehoder"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@null">
+
+            <TextView
+                android:id="@+id/txtUser"
+                style="@style/text14"
+                android:textStyle="bold"
+                android:textColor="@color/mainOrange"
+                android:text="123"/>
+
+            <ImageView
+                android:id="@+id/imgVerify"
+                android:layout_width="@dimen/dim16"
+                android:layout_height="@dimen/dim16"
+                android:src="@drawable/ic_verified"
+                android:layout_marginStart="@dimen/dim6"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/txtCreated"
+                style="@style/text12"
+                android:textColor="@color/lightGray"
+                android:text="123"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtMessage"
+            style="@style/text12"
+            android:maxLines="2"
+            android:layout_marginTop="@dimen/dim6"
+            android:textColor="@color/darkLightGray"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+
+</LinearLayout>

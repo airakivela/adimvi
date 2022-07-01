@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.profile.chat.MessageFragment"
+    android:background="@color/lightBlue"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white_black">
+
+        <LinearLayout
+            android:id="@+id/lltTool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim45"
+                android:orientation="horizontal"
+                android:background="@color/white_black"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back_grey"/>
+
+                <LinearLayout
+                    android:id="@+id/lltUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dim10">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/dim32"
+                        android:layout_height="@dimen/dim32"
+                        app:cardBackgroundColor="@null"
+                        app:cardCornerRadius="@dimen/dim16"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/imgUser"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_user_placehoder"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        style="@style/text16"
+                        android:layout_width="wrap_content"
+                        android:text="Registro"
+                        android:layout_marginStart="@dimen/dim10"/>
+
+                    <ImageView
+                        android:id="@+id/imgVerify"
+                        android:layout_width="@dimen/dim16"
+                        android:layout_height="@dimen/dim16"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_verified"/>
+
+                    <TextView
+                        android:id="@+id/txtTyping"
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:text="• Escribiendo"
+                        android:visibility="gone"
+                        android:layout_marginStart="@dimen/dim10"/>
+
+                    <TextView
+                        android:id="@+id/txtOnline"
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:text="• En línea"
+                        android:visibility="gone"
+                        android:layout_marginStart="@dimen/dim10"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctlContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_full_white_black"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/dim16"
+            android:layout_marginStart="@dimen/dim16"
+            android:layout_marginBottom="@dimen/dim10"
+            android:paddingTop="@dimen/dim12"
+            android:paddingStart="@dimen/dim12"
+            android:paddingEnd="@dimen/dim6">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCamera"
+                android:layout_width="@dimen/dim24"
+                android:layout_height="@dimen/dim24"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="@dimen/dim16"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/dim16"
+                app:layout_constraintEnd_toStartOf="@+id/cardSend"
+                android:layout_marginEnd="@dimen/dim16">
+
+                <ImageView
+                    android:id="@+id/imgCameraMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_camera_outline"
+                    app:tint="@color/lightGray"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSend"
+                android:layout_width="@dimen/dim32"
+                android:layout_height="@dimen/dim32"
+                app:cardBackgroundColor="@color/greenColor"
+                app:cardCornerRadius="@dimen/dim16"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardCamera"
+                app:layout_constraintTop_toTopOf="@+id/cardCamera"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/dim12">
+
+                <ImageView
+                    android:id="@+id/imgSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_send"
+                    android:scaleType="centerCrop"
+                    app:tint="#FFFFFF"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/edtMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Escribe..."
+                android:layout_marginBottom="@dimen/dim6"
+                android:maxLines="10"
+                android:textSize="16sp"
+                android:inputType="textMultiLine"
+                android:textColor="@color/darkGray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cardCamera"
+                android:paddingBottom="8dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/ctlContainer"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <ImageView
+            android:id="@+id/imgTemp"
+            android:layout_width="@dimen/dim55"
+            android:layout_height="@dimen/dim55"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

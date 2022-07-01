@@ -1,0 +1,4 @@
+include ':ratingbar'
+include ':wysiwyg'
+include ':app'
+rootProject.name = "Adimvi"

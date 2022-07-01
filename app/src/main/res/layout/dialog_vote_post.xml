@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:paddingHorizontal="@dimen/dim32">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_dialog_white_black"
+        android:paddingHorizontal="@dimen/dim24"
+        android:paddingVertical="@dimen/dim32"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dim100"
+            android:layout_height="@dimen/dim100"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_vote_post"/>
+
+        <TextView
+            style="@style/text20"
+            android:textSize="28sp"
+            android:text="¡Gracias por tu \n valoración!"
+            android:layout_marginTop="@dimen/dim32"
+            android:textColor="@color/darkGray"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <TextView
+            style="@style/text16"
+            android:textColor="@color/lightGray"
+            android:layout_marginTop="@dimen/dim32"
+            android:text="Tu voto ayuda a la comunidad a \n ofrecer el mejor contenido."
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:id="@+id/lltOkay"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim32"
+            android:background="@drawable/round_full_border"
+            android:padding="@dimen/dim12"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text16"
+                android:text="Okay"
+                android:textStyle="bold"
+                android:textColor="@color/darkLightGray"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

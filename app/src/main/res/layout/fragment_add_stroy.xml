@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.publish.AddStoryFragment"
+    android:background="@color/white_black">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nstStoryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@null">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcl_story"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim12"
+                android:background="@null"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/imgStoryBefore"
+                    android:layout_width="@dimen/dim32"
+                    android:layout_height="@dimen/dim32"
+                    android:src="@drawable/ic_back_grey"
+                    android:scaleType="centerCrop"
+                    app:tint="@color/black_white"/>
+
+                <ImageView
+                    android:id="@+id/imgStoryAdd"
+                    android:layout_width="@dimen/dim70"
+                    android:layout_height="@dimen/dim70"
+                    android:src="@drawable/ic_add_circle"
+                    android:scaleType="centerCrop"
+                    app:tint="@color/mainOrange"
+                    android:layout_marginHorizontal="@dimen/dim20"/>
+
+                <ImageView
+                    android:id="@+id/imgStoryAfter"
+                    android:layout_width="@dimen/dim32"
+                    android:layout_height="@dimen/dim32"
+                    android:src="@drawable/ic_next"
+                    android:scaleType="centerCrop"
+                    app:tint="@color/darkLightGray"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim24"
+                android:background="@null"
+                android:hint="Categorías"
+                android:textSize="16sp"
+                android:editable="false"
+                android:textColor="@color/darkGray"
+                android:layout_marginHorizontal="@dimen/dim10"/>
+
+            <EditText
+                android:id="@+id/edtTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginTop="@dimen/dim16"
+                android:textSize="16sp"
+                android:textColor="@color/darkLightGray"
+                android:hint="Etiquetas: utiliza # al comienzo de cada etiqueta"
+                android:layout_marginHorizontal="@dimen/dim10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:padding="@dimen/dim10">
+
+                <CheckBox
+                    android:id="@+id/checkbox3"
+                    android:layout_width="@dimen/dim32"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@null">
+
+                    <TextView
+                        style="@style/text14"
+                        android:text="Confirmo que he leído y acepto los"
+                        android:textColor="@color/darkLightGray"/>
+
+                    <TextView
+                        android:id="@+id/txtTermsCondition"
+                        style="@style/text14"
+                        android:text="Términos y condiciones."
+                        android:textColor="@color/mainOrange"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@null"
+                android:layout_marginTop="@dimen/dim16"
+                android:paddingBottom="@dimen/dim16"
+                android:paddingHorizontal="@dimen/dim10">
+
+                <android.widget.Button
+                    android:id="@+id/btnPublication"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/dim32"
+                    android:background="@drawable/round16"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:text="Publicar"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <android.widget.Button
+                    android:id="@+id/btnDraft"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/dim16"
+                    android:layout_height="@dimen/dim32"
+                    android:background="@drawable/round_light_gray16"
+                    android:textColor="@color/darkGray"
+                    android:textAllCaps="false"
+                    android:paddingStart="@dimen/dim16"
+                    android:paddingEnd="@dimen/dim16"
+                    android:text="Guardar borrador"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

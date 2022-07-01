@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:paddingVertical="50dp"
+    android:paddingHorizontal="@dimen/dim24"
+    android:gravity="center_horizontal"
+    tools:context=".screens.home.GuideItemFragment"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgRes"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/guide_3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        style="@style/text20"
+        android:layout_marginTop="@dimen/dim24"
+        android:textSize="22sp"
+        android:textColor="@color/darkGray"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Los creditos"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/txtContent"
+        style="@style/text16"
+        android:layout_marginTop="@dimen/dim24"
+        android:textColor="@color/lightGray"
+        android:textAlignment="center"
+        android:text="En Adimvi los escritores tienen la opción de compartir sus posts de manera gratuita o de pago. Los créditos te ayudarán a desbloquear estos posts de pago para acceder a su contenido."/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/txtSubContent"
+        style="@style/text16"
+        android:layout_marginTop="@dimen/dim24"
+        android:textColor="@color/lightGray"
+        android:textAlignment="center"
+        android:text="Puedes añadir créditos fácilmente desde tu perfil."/>
+
+
+    <LinearLayout
+        android:id="@+id/lltLast"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"/>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:paddingLeft="@dimen/dim24"
+    android:paddingRight="@dimen/dim24"
+    android:background="@null">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round16_white_black"
+        android:padding="@dimen/dim24"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtContent"
+            style="@style/text18"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/darkGray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim24">
+
+            <android.widget.Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim45"
+                android:layout_weight="1"
+                android:background="@drawable/round16"
+                android:text="Cancelar"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textSize="16sp"/>
+
+            <android.widget.Button
+                android:id="@+id/btnOK"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim45"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/dim24"
+                android:background="@drawable/round16"
+                android:text="Confirmar"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

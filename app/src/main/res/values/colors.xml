@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="ads_bg">#3d3c3c</color>
+    <color name="ads_button_bg">#ffc320</color>
+    <color name="gnt_test_background_color">#00F4F4F4</color>
+    <color name="gnt_white">#FFFFFF</color>
+    <color name="gnt_blue">#4285f4</color>
+    <color name="gnt_ad_green">#3A6728</color>
+    <color name="gnt_gray">#808080</color>
+    <color name="gnt_outline">#E0E0E0</color>
+    <color name="md_green_600">#43A047</color>
+
+    <color name="mainOrange">#F97A3E</color>
+    <color name="lightGray">#909090</color>
+    <color name="tagColor">#d3d3d3</color>
+    <color name="darkGray">#343434</color>
+    <color name="darkLightGray">#666666</color>
+    <color name="black_white">#000000</color>
+    <color name="white_black">#FFFFFF</color>
+    <color name="indicator_selected_dot">#252525</color>
+    <color name="badge_bg_color">#FF0000</color>
+    <color name="webView_color">#FFFFFF</color>
+    <color name="lighterGray">#F1F2F6</color>
+    <color name="lightBlue">#F1F2F6</color>
+    <color name="white_gray">#FFFFFF</color>
+    <color name="receive_cell">#FFEBE5</color>
+    <color name="mainYellow">#F5A930</color>
+    <color name="tabBackground">#44333333</color>
+    <color name="creditColor">#000000</color>
+    <color name="webDec_Color">#FFFFFF</color>
+    <color name="greenColor">#01B6EB</color>
+    <color name="mainGreen">#449d94</color>
+    <color name="secondaryYellow">#ffc95c</color>
+    <color name="borderColor">#ECECEC</color>
+    <color name="mainRed">#c20202</color>
+    <color name="whiteborder">#FFFFFF</color>
+    <color name="bottomsheetColor">#F1F2F6</color>
+    <color name="tagColorNew">#d3d3d3</color>
+    <color name="tagColorNew2">#b3b3b3</color>
+    <color name="tagColorNew3">#d3d3d3</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color">@color/lightGray</color>
+</resources>

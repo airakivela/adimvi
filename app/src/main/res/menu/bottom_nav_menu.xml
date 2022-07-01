@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_home"
+        android:title="@string/explora"
+        android:icon="@drawable/ic_explora"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/menu_follow"
+        android:title="@string/following"
+        android:icon="@drawable/ic_following"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/menu_post"
+        android:title="@string/post"
+        android:icon="@drawable/ic_post"
+        app:showAsAction="withText"/>
+    <!--    <item-->
+    <!--        android:id="@+id/menu_sale"-->
+    <!--        android:title="@string/sales"-->
+    <!--        android:icon="@drawable/ic_sale"-->
+    <!--        app:showAsAction="withText"/>-->
+
+    <item
+        android:id="@+id/menu_notification"
+        android:title="@string/novedades"
+        android:icon="@drawable/ic_bell"
+        app:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/menu_profile"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_profile"
+        app:showAsAction="withText"/>
+</menu>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:elevation="@dimen/dim4"
+    android:background="@color/white_black"
+    android:gravity="center_vertical"
+    android:id="@+id/lltTop">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim45"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dim20"
+        android:paddingRight="@dimen/dim20">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_grey"/>
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/text18"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Registro"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/lightGray"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_grey"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white_black"
+    tools:context=".screens.profile.MenuFragment">
+
+    <include layout="@layout/layout_navigation"/>
+
+    <LinearLayout
+        android:id="@+id/lltTerms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim20"
+        android:padding="@dimen/dim20"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dim32"
+            android:layout_height="@dimen/dim32"
+            android:src="@drawable/ic_info"
+            app:tint="@color/darkGray"/>
+
+        <TextView
+            style="@style/text16"
+            android:textColor="@color/darkGray"
+            android:text="Términos y privacidad"
+            android:layout_marginStart="@dimen/dim24"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lltHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim20"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dim32"
+            android:layout_height="@dimen/dim32"
+            android:src="@drawable/ic_help"
+            app:tint="@color/darkGray"/>
+
+        <TextView
+            style="@style/text16"
+            android:textColor="@color/darkGray"
+            android:text="Preguntas frecuentes"
+            android:layout_marginStart="@dimen/dim24"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lltContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim20"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dim32"
+            android:layout_height="@dimen/dim32"
+            android:src="@drawable/ic_contacto"
+            app:tint="@color/darkGray"/>
+
+        <TextView
+            style="@style/text16"
+            android:textColor="@color/darkGray"
+            android:text="Contacto"
+            android:layout_marginStart="@dimen/dim24"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lltLock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim20"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dim32"
+            android:layout_height="@dimen/dim32"
+            android:src="@drawable/ic_lock"
+            app:tint="@color/darkGray"/>
+
+        <TextView
+            style="@style/text16"
+            android:textColor="@color/darkGray"
+            android:text="Recuperar contraseña"
+            android:layout_marginStart="@dimen/dim24"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lltCredit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim20"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dim32"
+            android:layout_height="@dimen/dim32"
+            android:src="@drawable/ic_credit"
+            app:tint="@color/darkGray"/>
+
+        <TextView
+            style="@style/text16"
+            android:textColor="@color/darkGray"
+            android:text="Política de créditos"
+            android:layout_marginStart="@dimen/dim24"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@null"/>
+
+    <TextView
+        style="@style/text12"
+        android:text="Adimvi © Todos los derechos reservados"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dim32"
+        android:textColor="@color/darkLightGray"/>
+
+</LinearLayout>

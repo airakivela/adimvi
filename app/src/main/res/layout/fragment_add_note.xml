@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@null"
+    tools:context=".screens.profile.note.NoteListFragment">
+
+    <include layout="@layout/layout_navigation"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dim10">
+
+        <TextView
+            style="@style/text20"
+            android:textSize="30sp"
+            android:text="Notas"
+            android:textStyle="bold"
+            android:textColor="@color/mainYellow"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/imgRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_circle_remove"
+            app:tint="@color/mainYellow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dim10">
+
+        <EditText
+            android:id="@+id/edtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Título"
+            android:background="@null"
+            android:textColor="@color/darkGray"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imgSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_book_mark_fill"
+            android:layout_marginStart="@dimen/dim16"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dim10"
+        android:layout_marginEnd="@dimen/dim10"
+        android:layout_marginBottom="@dimen/dim10"
+        android:padding="@dimen/dim6"
+        android:background="@drawable/round_lightgray6">
+
+        <EditText
+            android:id="@+id/edtDesc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/darkGray"
+            android:textSize="16sp"
+            android:hint="Empieza a escribir aquí"
+            android:gravity="left|top"
+            android:background="@null"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

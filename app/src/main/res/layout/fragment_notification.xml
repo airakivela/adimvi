@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.home.NotificationFragment"
+    android:background="@color/white_black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white_black"
+        android:elevation="@dimen/dim4"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/dim24"
+            android:layout_height="@dimen/dim24"
+            android:layout_marginStart="@dimen/dim16"
+            android:src="@drawable/ic_back_grey"/>
+
+        <TextView
+            style="@style/text18"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Novedades"
+            android:textAlignment="center"
+            android:textColor="@color/lightGray"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imgAllSeen"
+            android:layout_width="@dimen/dim24"
+            android:layout_height="@dimen/dim24"
+            android:layout_marginEnd="@dimen/dim16"
+            android:src="@drawable/ic_eye"
+            app:tint="@color/darkGray"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null">
+
+        <TextView
+            android:id="@+id/txtNoData"
+            style="@style/text20"
+            android:text="Sin actividad por el momento."
+            android:textColor="@color/lightGray"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swpRclPost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcl_notification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_notification_shimer"/>
+
+                <include layout="@layout/layout_notification_shimer"/>
+
+                <include layout="@layout/layout_notification_shimer"/>
+
+                <include layout="@layout/layout_notification_shimer"/>
+
+                <include layout="@layout/layout_notification_shimer"/>
+
+                <include layout="@layout/layout_notification_shimer"/>
+
+                <include layout="@layout/layout_notification_shimer"/>
+
+                <include layout="@layout/layout_notification_shimer"/>
+
+                <include layout="@layout/layout_notification_shimer"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

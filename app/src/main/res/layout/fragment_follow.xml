@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.follow.FollowFragment"
+    android:orientation="vertical"
+    android:background="@color/lightBlue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_black">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/text20"
+            android:textSize="24sp"
+            android:text="Registro"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_margin="12dp"
+            android:textColor="@color/darkGray"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txtLoadMore"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim45"
+            android:layout_alignParentBottom="true"
+            android:text="Mostrar más..."
+            android:textAlignment="center"
+            android:textColor="@color/mainOrange"/>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swpRclPost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclPublication"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/txtNoDataPost"
+            style="@style/text20"
+            android:text="¡Ups! De momento no hay contenido para mostrarte en esta sección."
+            android:textColor="@color/lightGray"
+            android:layout_margin="@dimen/dim20"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:layout_below="@+id/segementTab">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclMuro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/lltEtiquetas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@null">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rclTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rclEtiquetas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtNoDataMuro"
+                style="@style/text20"
+                android:text="¡Ups! De momento no hay contenido para mostrarte en esta sección."
+                android:textColor="@color/lightGray"
+                android:layout_margin="@dimen/dim20"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txtNoDataTag"
+                style="@style/text20"
+                android:text="¡Ups! De momento no hay contenido para mostrarte en esta sección."
+                android:textColor="@color/lightGray"
+                android:layout_margin="@dimen/dim20"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/segementTab">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_post_shimer"/>
+
+                <include layout="@layout/layout_post_shimer"/>
+
+            </LinearLayout>
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/segementTab"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/dim10"
+            android:background="@drawable/round_gray6"
+            app:tabIndicatorHeight="0dp"
+            app:tabBackground="@drawable/selector_tab"
+            app:tabIndicatorColor="@null"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabRippleColor="@null"
+            style="@style/SegmentTabLayout"
+            android:layout_gravity="center_vertical"
+            app:tabSelectedTextColor="@android:color/black"
+            app:tabTextColor="@android:color/white">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:text="Publicaciones"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Muros"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Etiquetas"/>
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

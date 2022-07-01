@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dim20"
+    android:paddingStart="@dimen/dim20"
+    android:paddingEnd="@dimen/dim20"
+    android:background="@null"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/imgNotification"
+        android:layout_width="@dimen/dim24"
+        android:layout_height="@dimen/dim24"
+        android:background="@color/tagColor"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/dim20"
+        android:layout_marginEnd="@dimen/dim20"
+        android:background="@null">
+
+        <TextView
+            android:id="@+id/txtNotificaitonUser"
+            style="@style/text14"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:background="@color/tagColor"/>
+
+        <TextView
+            android:id="@+id/txtNotificationTitle"
+            style="@style/text14"
+            android:layout_marginTop="@dimen/dim4"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:background="@color/tagColor"/>
+
+        <TextView
+            android:id="@+id/txtNotificationTime"
+            style="@style/text14"
+            android:layout_marginTop="@dimen/dim4"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:background="@color/tagColor"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgSeenMarker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

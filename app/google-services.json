@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "153502508878",
+    "firebase_url": "https://adimvi-plataforma-blogging.firebaseio.com",
+    "project_id": "adimvi-plataforma-blogging",
+    "storage_bucket": "adimvi-plataforma-blogging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153502508878:android:a2173977bc8e30a0",
+        "android_client_info": {
+          "package_name": "com.application.adimvi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153502508878-9rkmj4u9rlq9rue0uof0d2kpvhucfaf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo2kN97owKxOyNiJtIFbD3rUTdM-DBMtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153502508878-9rkmj4u9rlq9rue0uof0d2kpvhucfaf7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "153502508878-v89k35ofc96r8k08came3gr1vg59fj1o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Adimvi.com",
+                "app_store_id": "1499987750"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-6706097279662517~6286934840"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153502508878:android:dd365d86bde048a28c201f",
+        "android_client_info": {
+          "package_name": "com.application.adimviandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153502508878-9rkmj4u9rlq9rue0uof0d2kpvhucfaf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo2kN97owKxOyNiJtIFbD3rUTdM-DBMtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153502508878-9rkmj4u9rlq9rue0uof0d2kpvhucfaf7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "153502508878-v89k35ofc96r8k08came3gr1vg59fj1o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Adimvi.com",
+                "app_store_id": "1499987750"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

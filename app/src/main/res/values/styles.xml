@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="text10" parent="text">
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="text12" parent="text">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="text14" parent="text">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="text16" parent="text">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="text18" parent="text">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="text20" parent="text">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="MEDT" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/dim20</item>
+        <item name="android:layout_marginEnd">@dimen/dim20</item>
+        <item name="boxBackgroundColor">@null</item>
+        <item name="boxStrokeColor">@null</item>
+        <item name="strokeColor">@null</item>
+        <item name="hintTextColor">@color/mainOrange</item>
+    </style>
+
+    <style name="AppButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dim45</item>
+        <item name="android:layout_marginTop">@dimen/dim15</item>
+        <item name="android:layout_marginStart">@dimen/dim20</item>
+        <item name="android:layout_marginEnd">@dimen/dim20</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="SheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <!--<item name="android:windowCloseOnTouchOutside">false</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">     @android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="TabLayout" parent="Widget.Design.TabLayout">
+        <item name="textAllCaps">false</item>
+        <item name="tabTextAppearance">@style/TapTextAppearance</item>"
+    </style>
+
+    <style name="TabLayout1" parent="Widget.Design.TabLayout">
+        <item name="textAllCaps">false</item>
+        <item name="tabTextAppearance">@style/TapTextAppearance1</item>"
+    </style>
+
+    <style name="TapTextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TapTextAppearance1">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SegmentTabLayout" parent="Widget.Design.TabLayout">
+        <item name="textAllCaps">false</item>
+        <item name="tabTextAppearance">@style/SegmentTapTextAppearance</item>"
+    </style>
+
+    <style name="SegmentTapTextAppearance">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/lightGray</item>
+        <item name="colorControlActivated">@color/mainYellow</item>
+    </style>
+
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="@dimen/dim24"
+    android:background="@drawable/round_dialog_white_black"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:background="@null"/>
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/dim32"
+            android:layout_height="@dimen/dim32"
+            android:src="@drawable/ic_close_circle"
+            app:tint="#80d3d3d3"
+            android:scaleType="fitXY"
+            android:layout_alignTop="@+id/viewPager"
+            android:layout_alignEnd="@+id/viewPager"
+            android:layout_marginTop="@dimen/dim16"
+            android:layout_marginEnd="@dimen/dim16"/>
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/viewPager"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/dim24"
+            app:dotsSize="12dp"
+            app:dotsCornerRadius="6dp"
+            app:dotsSpacing="4dp"
+            app:selectedDotColor="@color/indicator_selected_dot"
+            app:dotsColor="@color/tagColor"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

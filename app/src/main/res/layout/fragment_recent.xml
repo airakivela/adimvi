@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.profile.RecentFragment"
+    android:background="@color/lightBlue"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_navigation"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclRecent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:layout_marginTop="@dimen/dim10"/>
+
+        <TextView
+            android:id="@+id/txtNoData"
+            style="@style/text20"
+            android:text="Sin actividad por el momento."
+            android:textColor="@color/lightGray"
+            android:layout_margin="@dimen/dim20"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"/>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_recent_shimer"/>
+
+                <include layout="@layout/layout_recent_shimer"/>
+
+                <include layout="@layout/layout_recent_shimer"/>
+
+                <include layout="@layout/layout_recent_shimer"/>
+
+                <include layout="@layout/layout_recent_shimer"/>
+
+                <include layout="@layout/layout_recent_shimer"/>
+
+                <include layout="@layout/layout_recent_shimer"/>
+
+                <include layout="@layout/layout_recent_shimer"/>
+
+                <include layout="@layout/layout_recent_shimer"/>
+
+            </LinearLayout>
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

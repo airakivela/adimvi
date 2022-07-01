@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.follow.WallCommentFragment"
+    android:orientation="vertical"
+    android:background="@color/lightBlue">
+
+    <include layout="@layout/layout_navigation"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@null">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/dim10"
+                        android:layout_margin="@dimen/dim10"
+                        android:background="@drawable/round_white_dark16">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:orientation="horizontal"
+                            android:paddingEnd="@dimen/dim10">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/dim32"
+                                android:layout_height="@dimen/dim32"
+                                android:background="@null"
+                                app:cardElevation="0dp"
+                                app:cardCornerRadius="@dimen/dim16"
+                                android:layout_marginStart="@dimen/dim10"
+                                android:layout_marginTop="@dimen/dim10">
+
+                                <ImageView
+                                    android:id="@+id/imgUser"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ic_user_placehoder"
+                                    android:scaleType="centerCrop"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/dim4"
+                                android:background="@null"
+                                android:orientation="vertical"
+                                android:layout_marginTop="@dimen/dim10">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical"
+                                    android:background="@null">
+
+                                    <TextView
+                                        android:id="@+id/txtUseName"
+                                        android:layout_marginStart="@dimen/dim10"
+                                        style="@style/text14"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/mainOrange"/>
+
+                                    <ImageView
+                                        android:id="@+id/imgVerify"
+                                        android:layout_width="@dimen/dim16"
+                                        android:layout_height="@dimen/dim16"
+                                        android:layout_marginStart="@dimen/dim4"
+                                        android:src="@drawable/ic_verified"/>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+
+                                    <TextView
+                                        android:id="@+id/txtCreated"
+                                        android:layout_marginStart="@dimen/dim6"
+                                        style="@style/text12"
+                                        android:text=""
+                                        android:textColor="@color/lightGray"/>
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/txtContent"
+                                    style="@style/text14"
+                                    android:layout_marginTop="@dimen/dim6"
+                                    android:layout_marginStart="@dimen/dim10"
+                                    android:textColor="@color/darkGray"/>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardPostImg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="250dp"
+                                    android:layout_marginStart="@dimen/dim10"
+                                    app:cardBackgroundColor="@null"
+                                    app:cardElevation="0dp"
+                                    app:cardCornerRadius="@dimen/dim16"
+                                    android:layout_marginTop="@dimen/dim10">
+
+                                    <ImageView
+                                        android:id="@+id/imgPost"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/img_post_placeholder"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <co.lujun.androidtagview.TagContainerLayout
+                                    android:id="@+id/tagContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dim10"
+                                    android:layout_marginStart="@dimen/dim10"
+                                    app:container_enable_drag="false"
+                                    app:tag_clickable="true"
+                                    app:horizontal_interval="@dimen/dim6"
+                                    app:vertical_interval="2dp"
+                                    app:tag_theme="none"
+                                    app:container_background_color="@android:color/transparent"
+                                    app:container_border_color="@color/white_black"
+                                    app:tag_border_color="@android:color/transparent"
+                                    app:tag_background_color="@color/white_black"
+                                    app:tag_text_color="@color/tagColor"
+                                    android:visibility="gone"/>
+
+                                <LinearLayout
+                                    android:id="@+id/lltOriginWall"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="@dimen/dim10"
+                                    android:layout_marginStart="@dimen/dim10"
+                                    android:padding="@dimen/dim10"
+                                    android:visibility="gone"
+                                    android:background="@drawable/round_border10">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:background="@null">
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="@dimen/dim32"
+                                            android:layout_height="@dimen/dim32"
+                                            android:background="@null"
+                                            app:cardElevation="0dp"
+                                            app:cardCornerRadius="@dimen/dim16">
+
+                                            <ImageView
+                                                android:id="@+id/imgOriginWallUser"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:src="@drawable/ic_user_placehoder"
+                                                android:scaleType="centerCrop"/>
+
+                                        </androidx.cardview.widget.CardView>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:padding="@dimen/dim4"
+                                            android:background="@null">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:gravity="center_vertical"
+                                                android:background="@null">
+
+                                                <TextView
+                                                    android:id="@+id/txtOriginWallUseName"
+                                                    android:layout_marginStart="@dimen/dim10"
+                                                    style="@style/text14"
+                                                    android:textStyle="bold"
+                                                    android:textColor="@color/darkGray"/>
+
+                                                <ImageView
+                                                    android:id="@+id/imgOriginWallVerify"
+                                                    android:layout_width="@dimen/dim16"
+                                                    android:layout_height="@dimen/dim16"
+                                                    android:layout_marginStart="@dimen/dim4"
+                                                    android:src="@drawable/ic_verified"/>
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight="1"/>
+
+                                                <TextView
+                                                    android:id="@+id/txtOriginWallCreated"
+                                                    android:layout_marginStart="@dimen/dim6"
+                                                    style="@style/text12"
+                                                    android:text=""
+                                                    android:textColor="@color/lightGray"/>
+
+                                            </LinearLayout>
+
+                                            <TextView
+                                                android:id="@+id/txtOriginWallContent"
+                                                style="@style/text14"
+                                                android:layout_marginTop="@dimen/dim6"
+                                                android:textColor="@color/darkGray"/>
+
+                                            <androidx.cardview.widget.CardView
+                                                android:id="@+id/cardOriginWallPostImg"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="200dp"
+                                                app:cardBackgroundColor="@null"
+                                                app:cardElevation="0dp"
+                                                app:cardCornerRadius="@dimen/dim16"
+                                                android:layout_marginTop="@dimen/dim6">
+
+                                                <ImageView
+                                                    android:id="@+id/imgOriginWallPost"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:scaleType="centerCrop"
+                                                    android:src="@drawable/img_post_placeholder"/>
+
+                                            </androidx.cardview.widget.CardView>
+
+                                            <LinearLayout
+                                                android:id="@+id/lltProfileOriginWallHandle"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical|end"
+                                                android:paddingTop="@dimen/dim16"
+                                                android:background="@null"
+                                                android:visibility="gone">
+
+                                                <TextView
+                                                    android:id="@+id/txtProfileOriginWallComentar"
+                                                    style="@style/text14"
+                                                    android:text="Responder"
+                                                    android:textColor="@color/lightGray"/>
+
+                                                <TextView
+                                                    android:id="@+id/txtProfileOriginWallRemuro"
+                                                    style="@style/text14"
+                                                    android:layout_marginStart="@dimen/dim16"
+                                                    android:text="Remuro"
+                                                    android:textColor="@color/lightGray"/>
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/lltOriginPost"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="@dimen/dim10"
+                                    android:layout_marginStart="@dimen/dim10"
+                                    android:background="@drawable/round_border10">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cardOriginPostImg"
+                                        android:layout_width="@dimen/dim32"
+                                        android:layout_height="@dimen/dim32"
+                                        android:background="@null"
+                                        app:cardElevation="0dp"
+                                        android:layout_margin="@dimen/dim10"
+                                        app:cardCornerRadius="@dimen/dim6">
+
+                                        <ImageView
+                                            android:id="@+id/imgOriginPostImge"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:src="@drawable/ic_user_placehoder"
+                                            android:scaleType="centerCrop"/>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <TextView
+                                        android:id="@+id/txtOriginPostCreated"
+                                        android:layout_marginStart="@dimen/dim6"
+                                        style="@style/text12"
+                                        android:text=""
+                                        android:textColor="@color/lightGray"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginTop="@dimen/dim4"
+                                        android:layout_marginEnd="@dimen/dim10"/>
+
+                                    <TextView
+                                        android:id="@+id/txtOriginPostContent"
+                                        style="@style/text14"
+                                        android:textStyle="bold"
+                                        android:text=""
+                                        android:textColor="@color/mainOrange"
+                                        android:maxLines="1"
+                                        android:ellipsize="end"
+                                        android:layout_centerVertical="true"
+                                        android:layout_alignStart="@+id/cardOriginPostImg"
+                                        android:layout_marginStart="42dp"
+                                        android:layout_marginEnd="@dimen/dim10"/>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lltSiguiendoHandle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="@dimen/dim10"
+                                    android:layout_marginStart="@dimen/dim10"
+                                    android:background="@null"
+                                    android:visibility="gone">
+
+                                    <LinearLayout
+                                        android:id="@+id/lltCOmment"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/dim16"
+                                            android:layout_height="@dimen/dim16"
+                                            android:src="@drawable/ic_chat"/>
+
+                                        <TextView
+                                            android:id="@+id/txtCommentCnt"
+                                            style="@style/text14"
+                                            android:layout_marginStart="@dimen/dim6"
+                                            android:textColor="@color/lightGray"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/lltHeart"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/imgHeart"
+                                            android:layout_width="@dimen/dim16"
+                                            android:layout_height="@dimen/dim16"
+                                            android:src="@drawable/ic_heart"/>
+
+                                        <TextView
+                                            android:id="@+id/txtLiketCnt"
+                                            style="@style/text14"
+                                            android:layout_marginStart="@dimen/dim6"
+                                            android:textColor="@color/lightGray"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/lltRemuro"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/dim16"
+                                            android:layout_height="@dimen/dim16"
+                                            android:src="@drawable/ic_remuro_gray"/>
+
+                                        <TextView
+                                            android:id="@+id/txtRemuroCnt"
+                                            style="@style/text14"
+                                            android:layout_marginStart="@dimen/dim6"
+                                            android:textColor="@color/lightGray"/>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"/>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lltProfileHandle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="@dimen/dim10"
+                                    android:background="@null"
+                                    android:visibility="gone"
+                                    android:gravity="center_vertical|end">
+
+
+                                    <LinearLayout
+                                        android:id="@+id/lltProfileHeart"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical">
+
+                                        <ImageView
+                                            android:id="@+id/imgProfileHeart"
+                                            android:layout_width="@dimen/dim16"
+                                            android:layout_height="@dimen/dim16"
+                                            android:src="@drawable/ic_heart"/>
+
+                                        <TextView
+                                            android:id="@+id/txtProfileLiketCnt"
+                                            style="@style/text14"
+                                            android:layout_marginStart="@dimen/dim6"
+                                            android:textColor="@color/lightGray"/>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/txtProfileEdit"
+                                        style="@style/text14"
+                                        android:text="Editar"
+                                        android:layout_marginStart="@dimen/dim16"
+                                        android:textColor="@color/lightGray"/>
+
+                                    <TextView
+                                        android:id="@+id/txtProfileDelte"
+                                        style="@style/text14"
+                                        android:layout_marginStart="@dimen/dim16"
+                                        android:text="Borrar"
+                                        android:textColor="@color/lightGray"/>
+
+                                    <TextView
+                                        android:id="@+id/txtProfileComentar"
+                                        style="@style/text14"
+                                        android:text="Respnder"
+                                        android:layout_marginStart="@dimen/dim16"
+                                        android:textColor="@color/lightGray"/>
+
+                                    <TextView
+                                        android:id="@+id/txtProfileRemuro"
+                                        style="@style/text14"
+                                        android:layout_marginStart="@dimen/dim16"
+                                        android:text="Remuro"
+                                        android:textColor="@color/lightGray"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="@dimen/dim10"
+                        android:layout_marginEnd="@dimen/dim10"
+                        android:layout_marginBottom="@dimen/dim10"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/text16"
+                            android:textColor="@color/darkLightGray"
+                            android:text="Respuestas a este muro"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/dim10"
+                            android:background="@color/darkLightGray"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rclComments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"/>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctlContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_full_white_black"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/dim16"
+                android:layout_marginStart="@dimen/dim16"
+                android:layout_marginBottom="@dimen/dim10"
+                android:layout_marginTop="@dimen/dim10"
+                android:paddingTop="@dimen/dim12"
+                android:paddingStart="@dimen/dim12"
+                android:paddingEnd="@dimen/dim6">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSend"
+                    android:layout_width="@dimen/dim32"
+                    android:layout_height="@dimen/dim32"
+                    app:cardBackgroundColor="@color/greenColor"
+                    app:cardCornerRadius="@dimen/dim16"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtComment"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/dim6">
+
+                    <ImageView
+                        android:id="@+id/imgSend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_send"
+                        android:scaleType="centerCrop"
+                        app:tint="#FFFFFF"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <EditText
+                    android:id="@+id/edtComment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Escribir respuesta..."
+                    android:layout_marginBottom="@dimen/dim6"
+                    android:maxLines="10"
+                    android:textSize="14sp"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/darkGray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/cardSend"
+                    android:layout_marginEnd="@dimen/dim10"
+                    android:paddingBottom="8dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_comment_shimer"/>
+
+                <include layout="@layout/layout_comment_shimer"/>
+
+                <include layout="@layout/layout_comment_shimer"/>
+
+                <include layout="@layout/layout_comment_shimer"/>
+
+                <include layout="@layout/layout_comment_shimer"/>
+
+                <include layout="@layout/layout_comment_shimer"/>
+
+                <include layout="@layout/layout_comment_shimer"/>
+
+                <include layout="@layout/layout_comment_shimer"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

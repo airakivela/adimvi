@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:paddingHorizontal="@dimen/dim32">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_dialog_white_black"
+        android:paddingHorizontal="@dimen/dim16"
+        android:paddingVertical="@dimen/dim16"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/dim32"
+            android:layout_height="@dimen/dim32"
+            android:src="@drawable/ic_close_circle"
+            app:tint="#80d3d3d3"
+            android:scaleType="fitXY"
+            android:layout_gravity="end"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:src="@drawable/img_featured_guide"/>
+
+        <TextView
+            style="@style/text20"
+            android:textSize="28sp"
+            android:text="Destacar muro"
+            android:layout_marginTop="@dimen/dim12"
+            android:textColor="@color/darkGray"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            style="@style/text16"
+            android:textColor="@color/lightGray"
+            android:layout_marginTop="@dimen/dim12"
+            android:layout_marginHorizontal="@dimen/dim10"
+            android:text="Destaca tus muros en la página \n principal adelantando posiciones \n para que se encuentre entre las \n primeras de la lista."
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:id="@+id/lltOkay"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim32"
+            android:layout_marginBottom="@dimen/dim16"
+            android:background="@drawable/round_darkwhite6"
+            android:padding="@dimen/dim12"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text16"
+                android:text="Destacar por"
+                android:textStyle="bold"
+                android:textColor="@color/white_gray"/>
+
+            <TextView
+                android:layout_marginStart="@dimen/dim12"
+                style="@style/text16"
+                android:text="1,99€"
+                android:textStyle="bold"
+                android:textColor="@color/mainOrange"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

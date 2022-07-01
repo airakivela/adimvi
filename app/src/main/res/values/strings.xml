@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Adimvi</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="onBoardingTitle1">La nueva generación</string>
+    <string name="onBoardingContent1">Bienvenido/a a la plataforma social que te permite compartir todo tipo de contenido escrito y monetizar cada una de tus publicaciones.</string>
+    <string name="onBoardingTitle2">Para todo tipo de profesionales</string>
+    <string name="onBoardingContent2">Escritoras, bloggers, influencers, camareros, periodistas, cocineros… En Adimvi hay espacios de todo tipo perfectos para ti y lo que buscas.</string>
+    <string name="onBoardingTitle3">El protagonista eres tú</string>
+    <string name="onBoardingContent3">¿Te atreves a ser lo más auténtico que has sido nunca? Crea tu espacio, personalízalo y que se note que no eres uno más.</string>
+    <string name="appExit">Toque de nuevo para salir.</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="forgot_password">He olvidado mi contraseña</string>
+    <string name="no_account">¿No tienes una cuenta?</string>
+    <string name="register">Regístrate</string>
+    <string name="information">Información</string>
+    <string name="privacy_policy">Términos y política de privacidad</string>
+    <string name="contact">Contacto</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="email_desc">Privacidad: su dirección de correo electrónico no será compartida ni vendida a terceros.</string>
+    <string name="confirm_android">Confirmo que he leído y entendido Android</string>
+    <string name="term_condition">Términos y Condiciones.</string>
+    <string name="already_account">¿Ya tienes una cuenta?</string>
+    <string name="submit">Enviar</string>
+    <string name="home">Inicio</string>
+    <string name="following">Siguiendo</string>
+    <string name="post">Publicar</string>
+    <string name="sales">Ventas</string>
+    <string name="profile">Perfil</string>
+    <string name="no_sales">Sin ventas por el momento.</string>
+    <string name="check1content">Adimvi colabora con varias cadenas y marcas que promocionan sus productos y/o servicios con nosotros. Debido a esta colaboración, es posible que veas algunos anuncios en algún fragmento de tu publicación. El sistema de monetizado por visualizaciones de la plataforma solo funciona cuando esta opción no se encuentra seleccionada. Si decides seleccionar esta opción, la cantidad monetaria acumulada por esta publicación no será añadida a tu cuenta.</string>
+    <string name="check2content">Adimvi te proporciona la posibilidad de introducir tus propias imágenes promocionales en tus posts. Puedes configurar esta opción desde tu cuenta. El sistema de monetizado por visualizaciones de la plataforma solo funciona cuando esta opción no se encuentra seleccionada. Si decides seleccionar esta opción, la cantidad monetaria acumulada por esta publicación no será añadida a tu cuenta.</string>
+    <string name="sigue_a_este_usuario_para_disfrutar_de_m_s_salas_como_sta">Sigue a este usuario para \n disfrutar de más salas \n como ésta.</string>
+    <string name="novedades">Novedades</string>
+    <string name="explora">Explora</string>
+
+    <style name="credtit_info">*Todas las transacciones económicas, tanto de venta como de compra
+        dentro de la plataforma web o app, irán personalizadas bajo el nombre comercial ADIMVI.
+        Cualquier operación que no lleve nuestra firma y/o nombre comercial, podría ser un intento
+        de fraude y deberá notificar y denunciar dichos incidentes ante los organismos
+        correspondientes.
+
+        *Los créditos adquiridos serán de uso exclusivo dentro de la plataforma tanto en su versión
+        web como en su versión app para la lectura de los considerados posts "PREMIUM", aquellos
+        cuya lectura requieren de una cantidad económica impuesta por el autor marcada y previamente
+        impuesta visualmente por la plataforma. Dichos créditos no podrán ser utilizado en ningún
+        otro ámbito, plataforma o espacio distinto al dominio web www.adimvi.com o app Adimvi:
+        plataforma blogging. Cualquier intento de utilización de dichos créditos en otra plataforma
+        o adquisión de los mismos en otro ámbito que no sea los anteriormente expuestos, pueden ser
+        un intento de fraude y deberá notificar y denunciar dichos incidentes ante los organismos
+        correspondientes.
+
+        *La moneda utilizada dentro de la plataforma es el Dólar estadounidense (USD). Todas las
+        transacciones económicas realizadas en/por la plataforma serán efectuadas en esta moneda.
+
+        *Los créditos no podrán ser transferidos a tu balance personal y viceversa. Cada balance
+        dispone de una función específica dentro de la plataforma.
+
+        *La cantidad mínima requerida por la plataforma para introducir en tu balance de créditos es
+        de 5$ en su versión web y de 5.49$ en su versión app. Será necesario introducir una cantidad
+        igual o superior a la misma para poder continuar con la transacción.
+
+        *Una vez realizada la transacción y añadido los créditos en tu balance, no será posible la
+        retirada total y/o parcial de dicha cantidad. No obstante, nuestro equipo atenderá a
+        cualquier incidencia que pueda ocurrir y, en caso de ser necesario o por causa mayor, se
+        realizará un reembolso parcial dependiendo de la circunstancia expuesta por el cliente.
+        Adimvi se reserva el derecho total a rechazar cualquier solicitud de reembolso si no
+        considera lógica, veraz o con motivo suficiente para la realización de dicho proceso.
+
+        *Una vez confirmada la compra de créditos, aparecerán automáticamente en tu balance de
+        créditos. En caso de no recibir la cantidad adquirida de manera inmediata, la plataforma se
+        reserva el derecho de recibir un margen de 3 días para la introducción de dicha cantidad en
+        el balance del usuario debido a motivos varios; problemas de conexión, servidores, etc... En
+        caso de superar ese rango de tiempo y no recibir los fondos, por favor, ponerse en contacto
+        con nuestro soporte en support@adimvi.com informándonos de todos los datos como; nombre de
+        usuario, correo electrónico, fecha de realización, cantidad introducida y medio por el cual
+        se ha introducido.
+
+        *No existe una cantidad máxima a introducir en la plataforma, por lo que el usuario es libre
+        de introducir la cantidad que considere oportuna a través de la plataforma web. En cuanto a
+        la versión app, podrá introducir la cantidad que considere oportuna, siempre y cuando
+        teniendo en cuanta que solo podrá introducir cada vez, por el máximo de opciones de depósito
+        de créditos que ofrece la versión app. Además, la plataforma recomienda tener cuidado con
+        este aspecto debido a que la cantidad introducida no podrá ser reembolsada una vez
+        introducida en la plataforma a menos que no ocurra un caso extraordinario y nuestro equipo
+        considere oportuno valorar.
+
+        *Adimvi garantiza que responderá y resolverá cualquier incidencia que ocurra en cuanto a la
+        compra/venta de posts dentro de la plataforma, intentando asegurar siempre el bienestar y
+        conformidad de nuestros usuarios siempre y cuando no atente contra los principos, bases y
+        políticas de la plataforma Adimvi.
+
+        *En caso de que nuestro equipo considere que se ha realizado una operación fraudulenta, el
+        equipo de Adimvi se reserva todo el derecho de retener los fondos hasta que el caso sea
+        estudiado y resuelto. Siempre informando al usuario en cuestión sobre todo el proceso
+        realizado.
+    </style>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mainOrange">#F97A3E</color>
+    <color name="lightGray">#d3d3d3</color>
+    <color name="darkGray">#FFFFFF</color>
+    <color name="darkLightGray">#8B8B8B</color>
+    <color name="black_white">#FFFFFF</color>
+    <color name="white_black">#000000</color>
+    <color name="indicator_selected_dot">#585858</color>
+    <color name="badge_bg_color">#FF0000</color>
+    <color name="webView_color">#0D0D0D</color>
+    <color name="lighterGray">#1D1D1D</color>
+    <color name="lightBlue">#000000</color>
+    <color name="white_gray">#1D1D1D</color>
+    <color name="receive_cell">#2C2C2C</color>
+    <color name="mainYellow">#F5A930</color>
+    <color name="creditColor">#1D1D1D</color>
+    <color name="webDec_Color">#101010</color>
+    <color name="greenColor">#01B6EB</color>
+    <color name="borderColor">#1C1C1C</color>
+    <color name="whiteborder">@android:color/transparent</color>
+    <color name="bottomsheetColor">#0F0F0F</color>
+    <color name="tagColorNew">@android:color/transparent</color>
+    <color name="tagColorNew3">#ffffff</color>
+</resources>

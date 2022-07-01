@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.post.PostListByTagFragment"
+    android:background="@color/lightBlue"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_navigation"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null">
+
+        <LinearLayout
+            android:id="@+id/lltData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@null">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim32"
+                android:background="@null"
+                android:layout_marginTop="@dimen/dim10">
+
+                <LinearLayout
+                    android:id="@+id/lltSeguir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/round_white16"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dim10"
+                    android:paddingEnd="@dimen/dim10">
+
+                    <ImageView
+                        android:layout_width="@dimen/dim24"
+                        android:layout_height="@dimen/dim24"
+                        android:src="@drawable/ic_add_circle"
+                        app:tint="#343434"/>
+
+                    <TextView
+                        style="@style/text14"
+                        android:text="  Seguir"
+                        android:textStyle="bold"
+                        android:textColor="#343434"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lltSiguiendo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/round_black16"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dim10"
+                    android:paddingEnd="@dimen/dim10">
+
+                    <ImageView
+                        android:layout_width="@dimen/dim24"
+                        android:layout_height="@dimen/dim24"
+                        android:src="@drawable/ic_close_circle"/>
+
+                    <TextView
+                        style="@style/text14"
+                        android:text="  Siguiendo"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/segementTab"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim32"
+                android:layout_margin="@dimen/dim10"
+                android:background="@drawable/round_gray6"
+                app:tabIndicatorHeight="0dp"
+                app:tabBackground="@drawable/selector_tab"
+                app:tabIndicatorColor="@null"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabRippleColor="@null"
+                style="@style/SegmentTabLayout"
+                android:layout_gravity="center_vertical"
+                app:tabSelectedTextColor="@android:color/black"
+                app:tabTextColor="@android:color/white">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:text="Publicaciones"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Muros"/>
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null">
+
+                <RelativeLayout
+                    android:id="@+id/rlPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rclPosts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"/>
+
+                    <TextView
+                        android:id="@+id/txtNoDataPost"
+                        style="@style/text20"
+                        android:text="¡Ups! De momento no hay contenido para mostrarte en esta sección."
+                        android:textColor="@color/lightGray"
+                        android:layout_margin="@dimen/dim20"
+                        android:layout_centerInParent="true"
+                        android:textAlignment="center"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlMuro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rclMuros"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"/>
+
+                    <TextView
+                        android:id="@+id/txtNoDataMuro"
+                        style="@style/text20"
+                        android:text="¡Ups! Todavía no hay contenido para mostrarte en esta sección"
+                        android:textColor="@color/lightGray"
+                        android:layout_margin="@dimen/dim20"
+                        android:layout_centerInParent="true"
+                        android:textAlignment="center"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:visibility="gone"
+            android:id="@+id/shimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dim90"
+                    android:layout_height="@dimen/dim32"
+                    android:orientation="horizontal"
+                    android:background="@drawable/round_light_gray16"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dim10"
+                    android:layout_marginBottom="@dimen/dim10"/>
+
+                <include layout="@layout/layout_post_shimer"/>
+
+                <include layout="@layout/layout_post_shimer"/>
+
+            </LinearLayout>
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

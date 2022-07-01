@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.auth.ContactActivity"
+    android:background="@color/white_black"
+    android:orientation="vertical"
+    android:id="@+id/contnet">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim45"
+        android:orientation="horizontal"
+        android:background="@color/white_black"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dim20"
+        android:paddingRight="@dimen/dim20"
+        android:elevation="@dimen/dim4">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_grey"
+            android:onClick="onClickBackUB"/>
+
+        <TextView
+            style="@style/text18"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Registro"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/lightGray"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_grey"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dim20"
+        android:paddingLeft="@dimen/dim20"
+        android:paddingRight="@dimen/dim20"
+        android:background="@color/white_black">
+
+        <TextView
+            style="@style/text16"
+            android:text="Sus comentarios o sugerencias para Adimvi:"
+            android:textColor="@color/darkGray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round4"
+            android:layout_marginTop="@dimen/dim4">
+
+            <EditText
+                android:id="@+id/txt_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textSize="14sp"
+                android:textColor="@color/lightGray"
+                android:lines="5"
+                android:minLines="5"
+                android:maxLines="7"
+                android:paddingLeft="@dimen/dim4"
+                android:gravity="top|left"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/text16"
+            android:layout_marginTop="@dimen/dim10"
+            android:text="Tu nombre: (opcional)"
+            android:textColor="@color/darkGray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round4"
+            android:layout_marginTop="@dimen/dim4">
+
+            <EditText
+                android:id="@+id/txt_username"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:textSize="14sp"
+                android:paddingLeft="@dimen/dim4"
+                android:textColor="@color/lightGray"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/text16"
+            android:layout_marginTop="@dimen/dim10"
+            android:text="Su dirección de correo electrónico: (opcional)"
+            android:textColor="@color/darkGray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round4"
+            android:layout_marginTop="@dimen/dim4">
+
+            <EditText
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:textSize="14sp"
+                android:paddingLeft="@dimen/dim4"
+                android:textColor="@color/lightGray"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/text12"
+            android:layout_marginTop="@dimen/dim10"
+            android:text="Privacidad: su dirección de correo electrónico no será compartida ni vendida a terceros."
+            android:textColor="@color/lightGray"/>
+
+        <android.widget.Button
+            style="@style/AppButton"
+            android:background="@drawable/round10"
+            android:layout_marginTop="@dimen/dim20"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:text="@string/submit"
+            android:onClick="onClickSubmitUB"/>
+
+    </LinearLayout>
+
+</LinearLayout>

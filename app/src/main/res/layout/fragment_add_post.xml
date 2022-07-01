@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.publish.AddPostFragment"
+    android:background="@color/white_black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nstPostContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:scrollbars="none"
+            android:fillViewport="true"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null">
+
+                <LinearLayout
+                    android:id="@+id/lltDraft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        style="@style/text16"
+                        android:text="Borrador(es)"
+                        android:textColor="@color/darkGray"
+                        android:layout_margin="@dimen/dim10"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rclDraft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:background="@null"
+                        android:scrollbars="none"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@null"
+                    android:padding="@dimen/dim10"
+                    app:layout_constraintTop_toBottomOf="@+id/lltDraft">
+
+                    <EditText
+                        android:id="@+id/edtTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Título"
+                        android:layout_marginTop="@dimen/dim24"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkGray"/>
+
+                    <EditText
+                        android:id="@+id/edtCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim24"
+                        android:background="@null"
+                        android:hint="Categorías"
+                        android:textSize="16sp"
+                        android:editable="false"
+                        android:textColor="@color/darkGray"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dim10"
+                        android:paddingBottom="@dimen/dim10"
+                        android:layout_marginTop="14dp"
+                        android:background="@null">
+
+                        <LinearLayout
+                            android:id="@+id/lltImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/round_lightgray6"
+                            android:paddingStart="@dimen/dim16"
+                            android:paddingEnd="@dimen/dim16"
+                            android:paddingTop="@dimen/dim6"
+                            android:paddingBottom="@dimen/dim6"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_camera"
+                                app:tint="@color/darkGray"/>
+
+                            <TextView
+                                android:id="@+id/txtImage"
+                                style="@style/text14"
+                                android:text="Imagen"
+                                android:textColor="@color/darkGray"
+                                android:textStyle="bold"
+                                android:layout_marginStart="@dimen/dim16"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lltVideo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/round_lightgray6"
+                            android:paddingStart="@dimen/dim16"
+                            android:paddingEnd="@dimen/dim16"
+                            android:paddingTop="@dimen/dim6"
+                            android:paddingBottom="@dimen/dim6"
+                            android:gravity="center"
+                            android:layout_marginStart="@dimen/dim16">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_video"
+                                app:tint="@color/darkGray"/>
+
+                            <TextView
+                                android:id="@+id/txtVideo"
+                                style="@style/text14"
+                                android:text="Video"
+                                android:textColor="@color/darkGray"
+                                android:layout_marginStart="@dimen/dim16"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <android.widget.Button
+                        android:id="@+id/btnSelectImage"
+                        style="@style/AppButton"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:background="@drawable/round_dark_only_6"
+                        android:text="Subir portada"
+                        android:textStyle="normal"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/lltVideoData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/text14"
+                            android:text="Pega aquí la URL: Youtube Vimeo Vine Facebook Vk Dailymotion Metacafe Instagram Soundcloud"
+                            android:textStyle="italic"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim45"
+                            android:layout_marginTop="@dimen/dim10"
+                            android:background="@drawable/round_border10"
+                            android:padding="@dimen/dim4"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/edtVideoUrl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:textSize="16sp"
+                                android:textColor="@color/darkGray"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim16">
+
+                        <ImageView
+                            android:id="@+id/imgUpload"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:background="@color/lighterGray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:id="@+id/imgLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:src="@drawable/ic_a_logo"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/dim16"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/imgBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_bold"
+                            app:tint="@color/tagColor"/>
+
+                        <ImageView
+                            android:id="@+id/imgItalic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_italic"
+                            android:layout_marginStart="@dimen/dim10"
+                            app:tint="@color/tagColor"/>
+
+                        <ImageView
+                            android:id="@+id/imgUnderline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_underline"
+                            android:layout_marginStart="@dimen/dim10"
+                            app:tint="@color/tagColor"/>
+
+                        <ImageView
+                            android:id="@+id/imgLeft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_align_left"
+                            android:layout_marginStart="@dimen/dim10"
+                            app:tint="@color/tagColor"/>
+
+                        <ImageView
+                            android:id="@+id/imgRight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_align_right"
+                            android:layout_marginStart="@dimen/dim10"
+                            app:tint="@color/tagColor"/>
+
+                        <ImageView
+                            android:id="@+id/imgCenter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_align_center"
+                            android:layout_marginStart="@dimen/dim10"
+                            app:tint="@color/tagColor"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:id="@+id/imgCamera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_camera"
+                            app:tint="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <com.github.onecode369.wysiwyg.WYSIWYG
+                        android:id="@+id/richEditor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim16"/>
+
+                    <EditText
+                        android:id="@+id/edtTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/dim16"
+                        android:textSize="16sp"
+                        android:textColor="@color/darkLightGray"
+                        android:hint="Etiquetas: utiliza # al comienzo de cada etiqueta"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/dim6"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eliminar promociones de Adimvi en el post"
+                            android:textSize="14sp"
+                            android:textColor="@color/darkLightGray"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:id="@+id/imgCheck1Info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_info"
+                            app:tint="@color/lightGray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:text="Introducir mi propia imagen promocional"
+                            android:textSize="14sp"
+                            android:textColor="@color/darkLightGray"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:id="@+id/imgCheck2Info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_info"
+                            app:tint="@color/lightGray"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text16"
+                        android:text="Tipo de publicación"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkLightGray"/>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/dim16">
+
+                        <RadioButton
+                            android:id="@+id/radio1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gratuita"
+                            android:textSize="14sp"
+                            android:textColor="@color/darkLightGray"/>
+
+                        <RadioButton
+                            android:id="@+id/radio2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dim16"
+                            android:text="De pago"
+                            android:textSize="14sp"
+                            android:textColor="@color/darkLightGray"/>
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/lltPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="@dimen/dim32"
+                            android:background="@drawable/round4"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/dim6"
+                            android:paddingRight="@dimen/dim6">
+
+                            <EditText
+                                android:id="@+id/edtPrice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:textSize="14sp"
+                                android:textColor="@color/darkLightGray"
+                                android:inputType="numberDecimal"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/text20"
+                            android:text="$"
+                            android:layout_marginStart="@dimen/dim6"
+                            android:textColor="@color/lightGray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@null">
+
+                        <CheckBox
+                            android:id="@+id/checkbox3"
+                            android:layout_width="@dimen/dim32"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@null">
+
+                            <TextView
+                                style="@style/text14"
+                                android:text="Confirmo que he leído y acepto los"
+                                android:textColor="@color/darkLightGray"/>
+
+                            <TextView
+                                android:id="@+id/txtTermsCondition"
+                                style="@style/text14"
+                                android:text="Términos y condiciones."
+                                android:textColor="@color/mainOrange"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/dim16"
+                        android:paddingBottom="@dimen/dim16">
+
+                        <android.widget.Button
+                            android:id="@+id/btnPublication"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/dim32"
+                            android:background="@drawable/round16"
+                            android:textColor="@android:color/white"
+                            android:textAllCaps="false"
+                            android:text="Publicar"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <android.widget.Button
+                            android:id="@+id/btnDraft"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="@dimen/dim16"
+                            android:layout_height="@dimen/dim32"
+                            android:background="@drawable/round_light_gray16"
+                            android:textColor="@color/darkGray"
+                            android:textAllCaps="false"
+                            android:paddingStart="@dimen/dim16"
+                            android:paddingEnd="@dimen/dim16"
+                            android:text="Guardar borrador"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_post_shimer"/>
+
+                <include layout="@layout/layout_post_shimer"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgTemp"
+        android:layout_width="@dimen/dim55"
+        android:layout_height="@dimen/dim55"
+        android:visibility="gone"/>
+
+</LinearLayout>

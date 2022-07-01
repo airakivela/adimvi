@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    android:paddingLeft="@dimen/dim55"
+    android:paddingRight="@dimen/dim55"
+    android:background="@null">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dim16"
+        android:orientation="vertical"
+        android:background="@drawable/round10whitblack">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/dim32"
+            android:layout_height="@dimen/dim32"
+            android:src="@drawable/ic_close_circle"
+            app:tint="@color/mainGreen"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/dim16"
+            android:layout_marginEnd="@dimen/dim16"/>
+
+        <TextView
+            style="@style/text20"
+            android:textColor="@color/mainGreen"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/dim32"
+            android:layout_marginEnd="@dimen/dim32"
+            android:layout_marginTop="@dimen/dim16"
+            android:textAlignment="center"
+            android:text="¡Gracias por unirte al chat en vivo!"/>
+
+        <TextView
+            style="@style/text16"
+            android:layout_width="match_parent"
+            android:textColor="@color/lightGray"
+            android:layout_marginStart="@dimen/dim32"
+            android:layout_marginEnd="@dimen/dim32"
+            android:layout_marginTop="@dimen/dim16"
+            android:textAlignment="center"
+            android:text="@string/sigue_a_este_usuario_para_disfrutar_de_m_s_salas_como_sta"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim16"
+            app:cardCornerRadius="75dp"
+            app:cardBackgroundColor="@null"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/imgUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_placehoder"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtUserName"
+            style="@style/text20"
+            android:textColor="@color/mainGreen"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/dim32"
+            android:layout_marginEnd="@dimen/dim32"
+            android:layout_marginTop="@dimen/dim16"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:text="Laura16"/>
+
+        <android.widget.Button
+            android:id="@+id/btnSeguir"
+            android:layout_marginTop="@dimen/dim16"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/dim45"
+            android:background="@drawable/round_border_green"
+            android:text="Seguir"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/mainGreen"
+            android:textAllCaps="false"
+            android:textSize="16sp"/>
+
+        <android.widget.Button
+            android:id="@+id/btnSiguiendo"
+            android:layout_marginTop="@dimen/dim16"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/dim45"
+            android:background="@drawable/round_green"
+            android:text="Siguiendo"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

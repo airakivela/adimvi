@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null">
+
+        <ScrollView
+            android:visibility="visible"
+            android:id="@+id/mainSV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/llt_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null">
+
+                    <ImageView
+                        android:id="@+id/imgPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="370dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_post_placeholder"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="370dp"
+                        android:background="#22000000"/>
+
+                    <include layout="@layout/layout_post_detail_header"/>
+
+                    <ImageView
+                        android:id="@+id/imgPlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_play"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dim10"
+                    android:background="@null"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imgLikeDisable"
+                        android:layout_width="@dimen/dim20"
+                        android:layout_height="@dimen/dim20"
+                        android:src="@drawable/ic_diable_like"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/imgLike"
+                        android:layout_width="@dimen/dim20"
+                        android:layout_height="@dimen/dim20"
+                        android:src="@drawable/ic_like"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/imgLiked"
+                        android:layout_width="@dimen/dim20"
+                        android:layout_height="@dimen/dim20"
+                        android:src="@drawable/ic_select_like"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtNetVote"
+                        style="@style/text14"
+                        android:layout_marginEnd="@dimen/dim16"
+                        android:layout_marginStart="@dimen/dim16"
+                        android:textColor="@color/lightGray"/>
+
+                    <ImageView
+                        android:id="@+id/imgDisLiked"
+                        android:layout_width="@dimen/dim20"
+                        android:layout_height="@dimen/dim20"
+                        android:src="@drawable/ic_select_unlike"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/imgDisLike"
+                        android:layout_width="@dimen/dim20"
+                        android:layout_height="@dimen/dim20"
+                        android:src="@drawable/ic_unlike"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/imgDisLikeDisable"
+                        android:layout_width="@dimen/dim20"
+                        android:layout_height="@dimen/dim20"
+                        android:src="@drawable/ic_diable_unlike"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:id="@+id/lltRemuro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_border15"
+                        android:paddingEnd="@dimen/dim10"
+                        android:paddingStart="@dimen/dim10"
+                        android:paddingTop="@dimen/dim6"
+                        android:paddingBottom="@dimen/dim6"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dim12"
+                            android:layout_height="@dimen/dim12"
+                            android:src="@drawable/ic_noti_remuro"/>
+
+                        <TextView
+                            style="@style/text12"
+                            android:layout_marginStart="@dimen/dim10"
+                            android:textColor="@color/darkLightGray"
+                            android:text="Remuro"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lltShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_border15"
+                        android:paddingEnd="@dimen/dim10"
+                        android:paddingStart="@dimen/dim10"
+                        android:paddingTop="@dimen/dim6"
+                        android:paddingBottom="@dimen/dim6"
+                        android:layout_marginStart="@dimen/dim10"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dim12"
+                            android:layout_height="@dimen/dim12"
+                            android:src="@drawable/ic_share"/>
+
+                        <TextView
+                            style="@style/text12"
+                            android:layout_marginStart="@dimen/dim10"
+                            android:textColor="@color/darkLightGray"
+                            android:text="Compartir"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/dim10"
+                    android:paddingEnd="@dimen/dim10"
+                    android:background="@null"
+                    android:gravity="top">
+
+                    <TextView
+                        android:id="@+id/txtPostTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textSize="32sp"
+                        android:layout_marginEnd="@dimen/dim15"
+                        android:textColor="@color/darkGray"/>
+
+                    <ImageView
+                        android:id="@+id/imgBookMark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim4"
+                        android:src="@drawable/ic_book_mark_empty"
+                        app:tint="@color/lightGray"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtDateInfo"
+                    style="@style/text14"
+                    android:layout_margin="@dimen/dim10"
+                    android:textColor="@color/darkLightGray"/>
+
+                <WebView
+                    android:id="@+id/webPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="215dp"
+                    android:scrollIndicators="none"
+                    android:scrollbars="none"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:layout_marginEnd="@dimen/dim10"/>
+
+                <android.widget.Button
+                    android:id="@+id/btnMorePoset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dim32"
+                    android:background="@null"
+                    android:text="Seguir leyendo"
+                    android:textSize="16sp"
+                    android:textColor="@color/mainOrange"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="@dimen/dim10"
+                    android:layout_marginEnd="@dimen/dim10"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:layout_gravity="end"/>
+
+                <co.lujun.androidtagview.TagContainerLayout
+                    android:id="@+id/tagContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dim10"
+                    android:paddingEnd="@dimen/dim10"
+                    app:container_enable_drag="false"
+                    app:tag_clickable="true"
+                    app:horizontal_interval="@dimen/dim4"
+                    app:vertical_interval="2dp"
+                    app:tag_theme="none"
+                    app:container_background_color="@android:color/transparent"
+                    app:container_border_color="@android:color/transparent"
+                    app:tag_border_color="@android:color/transparent"
+                    app:tag_background_color="@android:color/transparent"
+                    app:tag_text_color="@color/tagColor"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/dim10"
+                    android:paddingStart="@dimen/dim10"
+                    android:paddingEnd="@dimen/dim10"
+                    android:background="@color/lighterGray"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txtVisitCnt"
+                        android:layout_width="124dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/darkLightGray"
+                        android:textSize="14sp"
+                        android:textAlignment="center"/>
+
+                    <LinearLayout
+                        android:id="@+id/lltEditPost"
+                        android:layout_width="@dimen/dim32"
+                        android:layout_height="@dimen/dim32"
+                        android:background="@drawable/round4"
+                        android:layout_marginStart="@dimen/dim6"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/dim24"
+                            android:layout_height="@dimen/dim24"
+                            android:src="@drawable/ic_edit_post"
+                            app:tint="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lltDeletePost"
+                        android:layout_width="@dimen/dim32"
+                        android:layout_height="@dimen/dim32"
+                        android:background="@drawable/round4"
+                        android:layout_marginStart="@dimen/dim6"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/dim24"
+                            android:layout_height="@dimen/dim24"
+                            android:src="@drawable/ic_delete_post"
+                            app:tint="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <RelativeLayout
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:background="@null">
+
+                        <android.widget.Button
+                            android:id="@+id/btnReportCancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim32"
+                            android:background="@drawable/round_orange4"
+                            android:text="Quitar denuncia"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"/>
+
+                        <android.widget.Button
+                            android:id="@+id/btnReport"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim32"
+                            android:background="@drawable/round4"
+                            android:text="Denunciar"
+                            android:textAllCaps="false"
+                            android:textColor="@color/darkGray"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:layout_marginEnd="@dimen/dim10"
+                    android:layout_marginBottom="@dimen/dim10"
+                    android:paddingStart="@dimen/dim10"
+                    android:background="@color/lighterGray"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/text16"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkLightGray"
+                        android:text="Valora :"/>
+
+                    <per.wsj.library.AndRatingBar
+                        android:id="@+id/ratingPost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="@dimen/dim10"
+                        android:rating="3.5"
+                        app:starSpacing="@dimen/dim4"
+                        app:starDrawable="@drawable/ic_star_fill"
+                        app:bgDrawable="@drawable/ic_star_empty"
+                        app:keepOriginColor="true"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:background="@color/white"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@null"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtVotes"
+                            style="@style/text16"
+                            android:textColor="@color/darkLightGray"
+                            android:text="3"/>
+
+                        <TextView
+                            style="@style/text10"
+                            android:maxLines="1"
+                            android:textColor="@color/darkLightGray"
+                            android:text="Votos"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lltAD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text18"
+                        android:text="Publicidad"
+                        android:textColor="@color/darkLightGray"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/dim10"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginTop="10dp">
+
+                        <com.application.adimviandroid.ui.TemplateView
+                            android:id="@+id/nativeAD"
+                            app:gnt_template_type="@layout/gnt_medium_template_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:id="@+id/imgUserAD"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:scaleType="centerCrop"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@null"
+                    android:layout_marginTop="@dimen/dim10">
+
+                    <TextView
+                        style="@style/text18"
+                        android:textColor="@color/darkGray"
+                        android:textStyle="bold"
+                        android:text="También te puede interesar"
+                        android:layout_marginStart="@dimen/dim10"
+                        android:layout_marginBottom="@dimen/dim10"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcl_related"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtComentCnt"
+                    style="@style/text18"
+                    android:textColor="@color/darkGray"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/dim10"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:layout_marginBottom="@dimen/dim10"/>
+
+                <com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView
+                    android:id="@+id/edtComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:layout_marginEnd="@dimen/dim10"
+                    android:background="@drawable/round_border10_light_gray"
+                    android:inputType="textMultiLine"
+                    android:minLines="6"
+                    android:padding="@dimen/dim4"
+                    android:gravity="top|left"
+                    android:textColor="@color/black_white"
+                    android:textSize="14sp"
+                    android:overScrollMode="always"
+                    android:scrollbars="vertical"
+                    android:scrollbarStyle="insideInset"
+                    app:socialFlags="mention"
+                    android:completionThreshold="0"
+                    app:mentionColor="@color/mainOrange"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@null"
+                    android:padding="@dimen/dim10">
+
+                    <CheckBox
+                        android:id="@+id/chkTerms"
+                        android:layout_width="@dimen/dim32"
+                        android:layout_height="@dimen/dim32"/>
+
+                    <TextView
+                        style="@style/text14"
+                        android:textColor="@color/lightGray"
+                        android:text="Notificarme por email si mi comentario es \nrespondido."/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@null"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:layout_marginEnd="@dimen/dim10"
+                    android:layout_marginBottom="@dimen/dim32">
+
+                    <android.widget.Button
+                        android:id="@+id/btnAddComment"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dim32"
+                        android:layout_weight="1"
+                        android:background="@drawable/round16"
+                        android:text="Añadir comentario"
+                        android:textColor="@android:color/white"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <android.widget.Button
+                        android:id="@+id/btnSeeComment"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dim32"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/dim20"
+                        android:background="@null"
+                        android:text="Ver comentarios"
+                        android:textColor="@color/darkLightGray"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/lltBeforePurchase"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgPostBeforePurchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/onboarding1"
+                    android:scaleType="centerCrop"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80000000"/>
+
+                <TextView
+                    android:id="@+id/txtPremium"
+                    style="@style/text20"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondaryYellow"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dim32"
+                    android:text="POST PREMIUM"/>
+
+                <TextView
+                    android:id="@+id/txtPostTitleBeforePurchase"
+                    style="@style/text20"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/dim32"
+                    android:layout_marginEnd="@dimen/dim32"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txtPremium"
+                    android:layout_marginTop="@dimen/dim45"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:layout_marginBottom="@dimen/dim32"
+                    android:layout_above="@id/lltBtns">
+
+                    <TextView
+                        style="@style/text16"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:text="Tus créditos actuales"/>
+
+                    <TextView
+                        style="@style/text16"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:textColor="@android:color/white"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:text="Precio del post"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lltBtns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/dim32">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtCredit"
+                            style="@style/text20"
+                            android:textStyle="bold"
+                            android:textColor="@color/secondaryYellow"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/dim24"
+                            android:layout_marginEnd="@dimen/dim24"
+                            android:layout_marginBottom="@dimen/dim32"
+                            android:text="$123"/>
+
+                        <android.widget.Button
+                            android:id="@+id/btnCredeit"
+                            android:layout_width="150dp"
+                            android:layout_height="@dimen/dim45"
+                            android:paddingStart="@dimen/dim10"
+                            android:paddingEnd="@dimen/dim10"
+                            android:background="@drawable/round_border25"
+                            android:text="Añadir créditos"
+                            android:textSize="14sp"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtPrice"
+                            style="@style/text20"
+                            android:textStyle="bold"
+                            android:textColor="@color/secondaryYellow"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/dim24"
+                            android:layout_marginEnd="@dimen/dim24"
+                            android:layout_marginBottom="@dimen/dim32"
+                            android:text="$123"/>
+
+                        <android.widget.Button
+                            android:id="@+id/btnCompare"
+                            android:layout_width="150dp"
+                            android:layout_height="@dimen/dim45"
+                            android:paddingStart="@dimen/dim10"
+                            android:paddingEnd="@dimen/dim10"
+                            android:background="@drawable/round_white45"
+                            android:text="Comprar"
+                            android:textSize="14sp"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:textColor="@color/cardview_dark_background"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text16"
+                android:textColor="@color/darkLightGray"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dim32"
+                android:layout_marginBottom="@dimen/dim32"
+                android:layout_marginStart="@dimen/dim24"
+                android:layout_marginEnd="@dimen/dim24"
+                android:textAlignment="center"
+                android:text="Estás intentando acceder a un post PREMIUM, por lo que es necesario que compres este post con tus créditos para poder leerlo."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltAfterPurchase"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgPostAfterPurchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/onboarding1"
+                    android:scaleType="centerCrop"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#80000000"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"/>
+
+                    <TextView
+                        style="@style/text20"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondaryYellow"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:textAlignment="center"
+                        android:text="¡Post desbloqueado \n con éxito! "/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/txtPostTitleAfterPurchase"
+                        style="@style/text20"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/dim10"
+                        android:layout_marginEnd="@dimen/dim10"
+                        android:layout_gravity="center_horizontal"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <android.widget.Button
+                        android:id="@+id/btnViewPost"
+                        android:layout_width="150dp"
+                        android:layout_height="@dimen/dim45"
+                        android:background="@drawable/round_white45"
+                        android:layout_marginBottom="@dimen/dim32"
+                        android:text="Ir aI post"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textColor="@color/cardview_dark_background"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text16"
+                android:textColor="@color/darkGray"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/dim32"
+                android:textAlignment="center"
+                android:text="Ahora podrás acceder a este post \n siempre que desees."/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

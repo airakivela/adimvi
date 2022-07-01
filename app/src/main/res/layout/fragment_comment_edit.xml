@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.comment.CommentEditFragment"
+    android:orientation="vertical"
+    android:background="@color/lightBlue">
+
+    <include layout="@layout/layout_navigation"/>
+
+    <TextView
+        style="@style/text18"
+        android:textColor="@color/darkGray"
+        android:text="Editar Comentario"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/dim32"
+        android:layout_marginStart="@dimen/dim10"/>
+
+    <EditText
+        android:id="@+id/edtComment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim100"
+        android:layout_marginStart="@dimen/dim10"
+        android:layout_marginEnd="@dimen/dim10"
+        android:layout_marginTop="@dimen/dim24"
+        android:background="@drawable/round_white_dark16"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:minLines="6"
+        android:maxLines="10"
+        android:padding="@dimen/dim4"
+        android:gravity="top|left"
+        android:textColor="@color/black_white"
+        android:textSize="14sp"/>
+
+    <android.widget.Button
+        android:id="@+id/btnEdit"
+        style="@style/AppButton"
+        android:layout_width="@dimen/dim100"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round16"
+        android:text="Editar"/>
+
+</LinearLayout>

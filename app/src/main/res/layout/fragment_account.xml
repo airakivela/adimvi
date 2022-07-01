@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white_black"
+    android:orientation="vertical"
+    tools:context=".screens.profile.AccountFragment">
+
+    <include layout="@layout/layout_navigation"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@null">
+
+            <com.application.adimviandroid.ui.ProfileHeaderView
+                android:id="@+id/profileHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null">
+
+                <LinearLayout
+                    android:id="@+id/lltMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dim16">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@null">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Nombre de usuario :"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                        <EditText
+                            android:id="@+id/edtFullName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:textSize="16sp"
+                            android:maxLength="15"
+                            android:textColor="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:background="@null">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Email :"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                        <EditText
+                            android:id="@+id/edtEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:background="@null">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="E-mail de Paypal :"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                        <EditText
+                            android:id="@+id/edtPaypal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:background="@null">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Ubicación :"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                        <EditText
+                            android:id="@+id/edtLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:background="@null">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Enlaces y sitios web:"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                        <EditText
+                            android:id="@+id/edtWeb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:background="@null">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Redes sociales :"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                        <EditText
+                            android:id="@+id/edtSocial"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/dim10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Nombre completo :"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                        <EditText
+                            android:id="@+id/edtName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/text16"
+                        android:layout_marginTop="@dimen/dim16"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkGray"
+                        android:text="Sobre mi"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_border10"
+                        android:layout_marginTop="@dimen/dim16"
+                        android:padding="@dimen/dim4">
+
+                        <EditText
+                            android:id="@+id/edtAboutMe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:minLines="5"
+                            android:maxLines="8"
+                            android:gravity="top|left"/>
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/chk1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dim32"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:text="Permitir que los usuarios me envíen mensajes privados."
+                        style="@style/text12"
+                        android:textColor="@color/darkGray"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/chk2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dim32"
+                        android:text="Permitir a los usuarios publicar en mi muro"
+                        style="@style/text12"
+                        android:textColor="@color/darkGray"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/chk3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dim32"
+                        android:text="Suscríbase a los correos electrónicos enviados a todos los usuarios"
+                        style="@style/text12"
+                        android:textColor="@color/darkGray"
+                        android:checked="true"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:layout_marginStart="@dimen/dim10"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/text14"
+                            android:text="Mis anuncios:"
+                            android:textColor="@color/darkGray"/>
+
+                        <CheckBox
+                            android:id="@+id/chk4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dim32"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lltAD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/dim16"
+                        android:paddingEnd="@dimen/dim16"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:background="@null">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:background="@null">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/dim45"
+                                android:layout_height="@dimen/dim45"
+                                app:cardBackgroundColor="@null"
+                                android:elevation="0dp"
+                                app:cardCornerRadius="@dimen/dim10">
+
+                                <ImageView
+                                    android:id="@+id/imgUserAD"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:background="@color/tagColor"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <android.widget.Button
+                                android:id="@+id/btnADImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dim32"
+                                android:paddingStart="@dimen/dim10"
+                                android:paddingEnd="@dimen/dim10"
+                                android:layout_marginStart="@dimen/dim16"
+                                android:text="Subir imagen"
+                                android:textAllCaps="false"
+                                style="@style/text12"
+                                android:textColor="@color/darkGray"
+                                android:background="@drawable/round_border10"/>
+
+                            <TextView
+                                android:id="@+id/txtAD"
+                                style="@style/text12"
+                                android:text="Ninguna imagen elegida"
+                                android:textColor="@color/darkLightGray"
+                                android:layout_marginStart="@dimen/dim16"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_border10"
+                            android:paddingStart="@dimen/dim6"
+                            android:paddingEnd="@dimen/dim6"
+                            android:paddingBottom="@dimen/dim12"
+                            android:paddingTop="@dimen/dim12"
+                            android:layout_marginTop="@dimen/dim16">
+
+                            <EditText
+                                android:id="@+id/edtImageUrl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="URL de la imagen"
+                                style="@style/text14"
+                                android:background="@null"
+                                android:textColor="@color/darkGray"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/dim16"
+                        android:paddingEnd="@dimen/dim16"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:background="@null">
+
+                        <TextView
+                            style="@style/text14"
+                            android:text="Imagen de perfil:"
+                            android:textColor="@color/darkGray"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:background="@null"
+                            android:layout_marginTop="@dimen/dim16">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/dim45"
+                                android:layout_height="@dimen/dim45"
+                                app:cardBackgroundColor="@null"
+                                android:elevation="0dp"
+                                app:cardCornerRadius="@dimen/dim24">
+
+                                <ImageView
+                                    android:id="@+id/frg_imgUser"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_user_placehoder"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <android.widget.Button
+                                android:id="@+id/btnProfileImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dim32"
+                                android:paddingStart="@dimen/dim10"
+                                android:paddingEnd="@dimen/dim10"
+                                android:text="Subir imagen"
+                                android:textAllCaps="false"
+                                android:layout_marginStart="@dimen/dim16"
+                                style="@style/text12"
+                                android:textColor="@color/darkGray"
+                                android:background="@drawable/round_border10"/>
+
+                            <TextView
+                                android:id="@+id/txtProfile"
+                                style="@style/text12"
+                                android:text="Ninguna imagen elegida"
+                                android:textColor="@color/darkLightGray"
+                                android:layout_marginStart="@dimen/dim16"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/dim16"
+                        android:paddingEnd="@dimen/dim16"
+                        android:layout_marginTop="@dimen/dim10"
+                        android:background="@null">
+
+                        <TextView
+                            style="@style/text14"
+                            android:text="Imagen de portada :"
+                            android:textColor="@color/darkGray"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:background="@null"
+                            android:layout_marginTop="@dimen/dim16">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/dim45"
+                                android:layout_height="@dimen/dim45"
+                                app:cardBackgroundColor="@null"
+                                android:elevation="0dp"
+                                app:cardCornerRadius="@dimen/dim10">
+
+                                <ImageView
+                                    android:id="@+id/imgUserBg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:background="@color/tagColor"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <android.widget.Button
+                                android:id="@+id/btnProfileBgImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dim32"
+                                android:paddingStart="@dimen/dim10"
+                                android:paddingEnd="@dimen/dim10"
+                                android:text="Subir portada"
+                                android:textAllCaps="false"
+                                android:layout_marginStart="@dimen/dim16"
+                                style="@style/text12"
+                                android:textColor="@color/darkGray"
+                                android:background="@drawable/round_border10"/>
+
+                            <TextView
+                                android:id="@+id/txtCover"
+                                style="@style/text12"
+                                android:text="Ninguna imagen elegida"
+                                android:textColor="@color/darkLightGray"
+                                android:layout_marginStart="@dimen/dim16"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <android.widget.Button
+                        android:id="@+id/btnSave"
+                        style="@style/AppButton"
+                        android:background="@drawable/round10"
+                        android:text="Guardar perfil"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/dim16">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Contraseña anterior :"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                        <EditText
+                            android:id="@+id/edtOldPwd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/dim16">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Nueva contraseña :"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                        <EditText
+                            android:id="@+id/edtNewPwd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/dim16">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Repetir nueva :"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                        <EditText
+                            android:id="@+id/edtConfirmPwd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:textSize="16sp"
+                            android:textColor="@color/darkGray"/>
+
+                    </LinearLayout>
+
+                    <android.widget.Button
+                        android:id="@+id/btnSavePwd"
+                        style="@style/AppButton"
+                        android:layout_marginBottom="@dimen/dim32"
+                        android:background="@drawable/round10"
+                        android:text="Cambiar contraseña"/>
+
+                </LinearLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dim16"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim32"
+                            android:background="@color/tagColor"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dim16"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim32"
+                            android:background="@color/tagColor"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dim16"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim32"
+                            android:background="@color/tagColor"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dim16"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim32"
+                            android:background="@color/tagColor"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dim16"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim32"
+                            android:background="@color/tagColor"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dim16"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim32"
+                            android:background="@color/tagColor"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/dim16"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim32"
+                            android:background="@color/tagColor"/>
+
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

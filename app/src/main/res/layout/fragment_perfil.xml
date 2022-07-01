@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.profile.viewpager.PerfilFragment"
+    android:orientation="vertical"
+    android:background="@color/white_black">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@null"
+            android:layout_margin="@dimen/dim10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/lltActivation"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dim45"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/round_border_full">
+
+                    <ImageView
+                        android:layout_width="@dimen/dim24"
+                        android:layout_height="@dimen/dim24"
+                        android:src="@drawable/ic_pulse"/>
+
+                    <TextView
+                        style="@style/text12"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/dim16"
+                        android:text="Actividad reciente"
+                        android:textColor="@color/darkGray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lltMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dim45"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/dim16"
+                    android:background="@drawable/round_border_full">
+
+                    <ImageView
+                        android:layout_width="@dimen/dim24"
+                        android:layout_height="@dimen/dim24"
+                        android:src="@drawable/ic_chat_box"/>
+
+                    <TextView
+                        style="@style/text12"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/dim16"
+                        android:text="Enviar mensaje"
+                        android:textColor="@color/darkGray"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginTop="@dimen/dim10"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="@dimen/dim32"
+                    android:background="@color/mainOrange"/>
+
+                <TextView
+                    style="@style/text20"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:text="Sobre mi"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkGray"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtAboutMe"
+                style="@style/text16"
+                android:layout_marginTop="@dimen/dim16"
+                android:layout_marginStart="@dimen/dim16"
+                android:textColor="@color/darkGray"
+                android:minHeight="@dimen/dim100"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginTop="@dimen/dim16"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="@dimen/dim32"
+                    android:background="@color/mainOrange"/>
+
+                <TextView
+                    style="@style/text20"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:text="Redes sociales"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkGray"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtSocial"
+                style="@style/text16"
+                android:layout_marginTop="@dimen/dim16"
+                android:layout_marginBottom="@dimen/dim16"
+                android:layout_marginStart="@dimen/dim16"
+                android:textColor="@color/darkGray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="@dimen/dim32"
+                    android:background="@color/mainOrange"/>
+
+                <TextView
+                    style="@style/text20"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:text="Nombre completo"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkGray"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtNumber"
+                style="@style/text16"
+                android:layout_marginTop="@dimen/dim16"
+                android:layout_marginBottom="@dimen/dim16"
+                android:layout_marginStart="@dimen/dim16"
+                android:textColor="@color/darkGray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="@dimen/dim32"
+                    android:background="@color/mainOrange"/>
+
+                <TextView
+                    style="@style/text20"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:text="Enlaces y sitios web"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkGray"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtWeb"
+                style="@style/text16"
+                android:layout_marginTop="@dimen/dim16"
+                android:layout_marginBottom="@dimen/dim16"
+                android:layout_marginStart="@dimen/dim16"
+                android:textColor="@color/mainOrange"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="@dimen/dim32"
+                    android:background="@color/mainOrange"/>
+
+                <TextView
+                    style="@style/text20"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:text="Ubicación"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkGray"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtLocation"
+                style="@style/text16"
+                android:layout_marginTop="@dimen/dim16"
+                android:layout_marginBottom="@dimen/dim16"
+                android:layout_marginStart="@dimen/dim16"
+                android:textColor="@color/darkGray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="@dimen/dim32"
+                    android:background="@color/mainOrange"/>
+
+                <TextView
+                    style="@style/text20"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:text="Registrad@"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkGray"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtRegister"
+                style="@style/text16"
+                android:layout_marginTop="@dimen/dim16"
+                android:layout_marginBottom="@dimen/dim16"
+                android:layout_marginStart="@dimen/dim16"
+                android:textColor="@color/darkGray"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.CreditActivity"
+    android:orientation="vertical"
+    android:background="@null"
+    android:gravity="center_horizontal">
+
+    <include layout="@layout/layout_navigation"/>
+
+    <ImageView
+        android:layout_marginTop="@dimen/dim20"
+        android:layout_width="@dimen/dim70"
+        android:layout_height="@dimen/dim70"
+        android:src="@drawable/ic_launcher"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dim20"
+        android:layout_marginStart="@dimen/dim20"
+        android:layout_marginEnd="@dimen/dim20"
+        android:background="@null"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dim24">
+
+            <TextView
+                style="@style/text14"
+                android:text="*Todas las transacciones económicas, tanto de venta como de compra dentro de la plataforma web o app, irán personalizadas bajo el nombre comercial ADIMVI. Cualquier operación que no lleve nuestra firma y/o nombre comercial, podría ser un intento de fraude y deberá notificar y denunciar dichos incidentes ante los organismos correspondientes."/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dim16"
+                style="@style/text14"
+                android:text="*Los créditos adquiridos serán de uso exclusivo dentro de la plataforma tanto en su versión web como en su versión app para la lectura de los considerados posts \'PREMIUM\', aquellos cuya lectura requieren de una cantidad económica impuesta por el autor marcada y previamente impuesta visualmente por la plataforma. Dichos créditos no podrán ser utilizado en ningún otro ámbito, plataforma o espacio distinto al dominio web www.adimvi.com o app Adimvi: plataforma blogging. Cualquier intento de utilización de dichos créditos en otra plataforma o adquisión de los mismos en otro ámbito que no sea los anteriormente expuestos, pueden ser un intento de fraude y deberá notificar y denunciar dichos incidentes ante los organismos correspondientes."/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dim16"
+                style="@style/text14"
+                android:text="*La moneda utilizada dentro de la plataforma es el Dólar estadounidense (USD). Todas las transacciones económicas realizadas en/por la plataforma serán efectuadas en esta moneda.
+                "/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dim16"
+                style="@style/text14"
+                android:text="*Los créditos no podrán ser transferidos a tu balance personal y viceversa. Cada balance dispone de una función específica dentro de la plataforma."/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dim16"
+                style="@style/text14"
+                android:text="*La cantidad mínima requerida por la plataforma para introducir en tu balance de créditos es de 5$ en su versión web y de 5.49$ en su versión app. Será necesario introducir una cantidad igual o superior a la misma para poder continuar con la transacción.
+"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dim16"
+                style="@style/text14"
+                android:text="*Una vez realizada la transacción y añadido los créditos en tu balance, no será posible la retirada total y/o parcial de dicha cantidad. No obstante, nuestro equipo atenderá a cualquier incidencia que pueda ocurrir y, en caso de ser necesario o por causa mayor, se realizará un reembolso parcial dependiendo de la circunstancia expuesta por el cliente. Adimvi se reserva el derecho total a rechazar cualquier solicitud de reembolso si no considera lógica, veraz o con motivo suficiente para la realización de dicho proceso.
+"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dim16"
+                style="@style/text14"
+                android:text="*Una vez confirmada la compra de créditos, aparecerán automáticamente en tu balance de créditos. En caso de no recibir la cantidad adquirida de manera inmediata, la plataforma se reserva el derecho de recibir un margen de 3 días para la introducción de dicha cantidad en el balance del usuario debido a motivos varios; problemas de conexión, servidores, etc... En caso de superar ese rango de tiempo y no recibir los fondos, por favor, ponerse en contacto con nuestro soporte en support@adimvi.com informándonos de todos los datos como; nombre de usuario, correo electrónico, fecha de realización, cantidad introducida y medio por el cual se ha introducido.
+"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dim16"
+                style="@style/text14"
+                android:text="*No existe una cantidad máxima a introducir en la plataforma, por lo que el usuario es libre de introducir la cantidad que considere oportuna a través de la plataforma web. En cuanto a la versión app, podrá introducir la cantidad que considere oportuna, siempre y cuando teniendo en cuanta que solo podrá introducir cada vez, por el máximo de opciones de depósito de créditos que ofrece la versión app. Además, la plataforma recomienda tener cuidado con este aspecto debido a que la cantidad introducida no podrá ser reembolsada una vez introducida en la plataforma a menos que no ocurra un caso extraordinario y nuestro equipo considere oportuno valorar.
+"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dim16"
+                style="@style/text14"
+                android:text="*Adimvi garantiza que responderá y resolverá cualquier incidencia que ocurra en cuanto a la compra/venta de posts dentro de la plataforma, intentando asegurar siempre el bienestar y conformidad de nuestros usuarios siempre y cuando no atente contra los principos, bases y políticas de la plataforma Adimvi."/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dim16"
+                style="@style/text14"
+                android:text="*En caso de que nuestro equipo considere que se ha realizado una operación fraudulenta, el equipo de Adimvi se reserva todo el derecho de retener los fondos hasta que el caso sea estudiado y resuelto. Siempre informando al usuario en cuestión sobre todo el proceso realizado.
+"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.home.chatroom.ChatRoomActivity"
+    android:id="@+id/rltContainer"
+    android:animateLayoutChanges="true">
+
+    <ImageView
+        android:id="@+id/imgBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_1"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:paddingVertical="@dimen/dim15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/dim45"
+                android:layout_height="@dimen/dim45"
+                app:cardBackgroundColor="@null"
+                app:cardCornerRadius="@dimen/dim32"
+                android:elevation="0dp">
+
+                <ImageView
+                    android:id="@+id/imgAdminUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_user_placehoder"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txtAdminName"
+                        style="@style/text16"
+                        android:layout_marginStart="@dimen/dim10"
+                        android:layout_marginEnd="@dimen/dim10"
+                        android:text="1234567894561231123"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:maxWidth="100dp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:id="@+id/imgAdminVerify"
+                        android:layout_width="@dimen/dim16"
+                        android:layout_height="@dimen/dim16"
+                        android:src="@drawable/ic_verified"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        android:layout_marginStart="@dimen/dim6"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtTyping"
+                    style="@style/text12"
+                    android:layout_marginStart="@dimen/dim10"
+                    android:textColor="@android:color/white"
+                    android:text="Escribiendo..."
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dim32"
+                android:background="@drawable/round_black16"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dim20"
+                android:paddingEnd="@dimen/dim20"
+                android:layout_marginEnd="@dimen/dim15">
+
+                <ImageView
+                    android:layout_width="@dimen/dim24"
+                    android:layout_height="@dimen/dim24"
+                    android:src="@drawable/ic_groups"
+                    app:tint="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/txtMemberCnt"
+                    style="@style/text14"
+                    android:layout_marginStart="@dimen/dim15"
+                    android:textColor="@android:color/white"
+                    android:text="123"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crdClose"
+                android:layout_width="@dimen/dim32"
+                android:layout_height="@dimen/dim32"
+                app:cardBackgroundColor="@color/greenColor"
+                app:cardCornerRadius="@dimen/dim16"
+                android:layout_marginEnd="@dimen/dim15"
+                android:elevation="0dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dim24"
+                    android:layout_height="@dimen/dim24"
+                    android:src="@drawable/ic_close"
+                    app:tint="@android:color/white"
+                    android:layout_gravity="center"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/lltContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_above="@id/csBottom">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclAdminChat"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scrollbars="none"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclOtherChat"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white_black"
+                android:scrollbars="none"/>
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/csBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_black"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/dim15">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/csSend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/record_button"
+                android:layout_marginEnd="@dimen/dim15"
+                android:layout_marginStart="@dimen/dim15"
+                android:background="@drawable/round_border32white">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crdCamera"
+                    android:layout_width="@dimen/dim32"
+                    android:layout_height="@dimen/dim32"
+                    app:cardCornerRadius="@dimen/dim16"
+                    app:cardBackgroundColor="@color/white_black"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/dim15"
+                    app:layout_constraintBottom_toBottomOf="@id/csSend"
+                    android:layout_marginBottom="@dimen/dim4">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null">
+
+                        <ImageView
+                            android:id="@+id/imgExtra"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/imgCamera"
+                            android:layout_width="@dimen/dim32"
+                            android:layout_height="@dimen/dim32"
+                            android:src="@drawable/ic_camera_outline"
+                            app:tint="@color/lightGray"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <EditText
+                    android:id="@+id/edtMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/dim15"
+                    app:layout_constraintEnd_toStartOf="@id/crdCamera"
+                    android:layout_marginEnd="@dimen/dim15"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/dim10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/dim10"
+                    android:background="@null"
+                    android:maxLines="10"
+                    android:textSize="16sp"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/darkGray"
+                    android:hint="Enviar mensaje"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.devlomi.record_view.RecordView
+                android:id="@+id/record_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/record_button"
+                android:layout_marginEnd="@dimen/dim15"
+                android:layout_marginStart="@dimen/dim15"
+                app:slide_to_cancel_margin_right="10dp"
+                app:slide_to_cancel_arrow="@drawable/ic_back_grey"
+                app:counter_time_color="@color/black_white"
+                app:slide_to_cancel_arrow_color="@color/black_white"
+                app:slide_to_cancel_text="Desliza para cancelar" />
+
+            <com.application.adimviandroid.ui.AnimButton
+                android:id="@+id/record_button"
+                android:layout_width="@dimen/dim32"
+                android:layout_height="@dimen/dim32"
+                android:scaleType="centerInside"
+                android:background="@drawable/round_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/dim6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/dim4"
+                app:recording="@drawable/recv_ic_mic_white"
+                app:typing="@drawable/ic_send_white"
+                tools:ignore="NotSibling" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <com.application.adimviandroid.ui.VoicePlayView
+        android:id="@+id/voicePlayView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

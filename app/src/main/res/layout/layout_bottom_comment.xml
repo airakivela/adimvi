@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ctlContainer"
+        android:layout_marginBottom="@dimen/dim12"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="@dimen/dim100"
+            android:layout_height="@dimen/dim6"
+            android:layout_marginTop="@dimen/dim32"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/round_light_gray16"/>
+
+        <TextView
+            android:id="@+id/txtCommentCnt"
+            style="@style/text16"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/darkLightGray"
+            android:textStyle="bold"
+            android:layout_marginVertical="@dimen/dim20"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclComments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_full_white_black"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/dim16"
+        android:layout_marginStart="@dimen/dim16"
+        android:layout_marginBottom="@dimen/dim10"
+        android:layout_marginTop="@dimen/dim10"
+        android:paddingTop="@dimen/dim12"
+        android:paddingStart="@dimen/dim12"
+        android:paddingEnd="@dimen/dim6">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSend"
+            android:layout_width="@dimen/dim32"
+            android:layout_height="@dimen/dim32"
+            app:cardBackgroundColor="@color/mainGreen"
+            app:cardCornerRadius="@dimen/dim16"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/edtComment"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/dim6">
+
+            <ImageView
+                android:id="@+id/imgSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_send"
+                android:scaleType="centerCrop"
+                app:tint="#FFFFFF"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView
+            android:id="@+id/edtComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="Escribir comentario..."
+            android:layout_marginBottom="@dimen/dim6"
+            android:maxLines="10"
+            android:textSize="14sp"
+            android:inputType="textMultiLine"
+            android:textColor="@color/darkGray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cardSend"
+            android:layout_marginEnd="@dimen/dim10"
+            android:paddingBottom="8dp"
+            app:socialFlags="mention"
+            android:completionThreshold="0"
+            app:mentionColor="@color/mainOrange"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txtNoData"
+        style="@style/text20"
+        android:visibility="visible"
+        android:text=" ¡Vaya! De momento no hay ningún comentario en esta publicación."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textColor="@color/lightGray"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_comment_shimer"/>
+
+            <include layout="@layout/layout_comment_shimer"/>
+
+            <include layout="@layout/layout_comment_shimer"/>
+
+            <include layout="@layout/layout_comment_shimer"/>
+
+            <include layout="@layout/layout_comment_shimer"/>
+
+            <include layout="@layout/layout_comment_shimer"/>
+
+            <include layout="@layout/layout_comment_shimer"/>
+
+            <include layout="@layout/layout_comment_shimer"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</RelativeLayout>
